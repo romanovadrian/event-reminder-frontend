@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '';
+const ENVIRONMENT = process.env.ENVIRONMENT
 
 function buildHeaders(token, customHeaders) {
   const headers = {
@@ -13,7 +13,13 @@ function buildHeaders(token, customHeaders) {
 }
 
 async function request(path, options = {}) {
-  const url = `${API_BASE_URL}${path}`;
+  let url;
+  if (ENVIRONMENT === 'production') {
+    url = `/api${path}`;
+  } else {
+    url = path;
+  }
+  
   const response = await fetch(url, options);
 
   if (response.status === 204) {
