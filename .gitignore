@@ -26,3 +26,5 @@ event-reminder/node_modules/
 .vscode
 
 .nvmrc
+
+.env
