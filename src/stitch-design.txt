@@ -1,0 +1,1279 @@
+<!-- Event Details - Desktop -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Olivia's 30th Jubilee | Festiva</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fff4f3",
+                    "secondary-dim": "#902c28",
+                    "on-primary-fixed-variant": "#591800",
+                    "secondary": "#a03833",
+                    "on-primary": "#ffefeb",
+                    "surface-variant": "#ffd3ce",
+                    "background": "#fff4f3",
+                    "surface-dim": "#ffc7c1",
+                    "outline-variant": "#e09c95",
+                    "surface": "#fff4f3",
+                    "on-tertiary-fixed": "#40004f",
+                    "tertiary-container": "#f19dfe",
+                    "secondary-fixed-dim": "#ffafa8",
+                    "secondary-container": "#ffc3bd",
+                    "on-primary-container": "#491300",
+                    "on-tertiary": "#ffeefc",
+                    "error-dim": "#9f0519",
+                    "primary-dim": "#902e02",
+                    "inverse-primary": "#fe7e4f",
+                    "tertiary-fixed-dim": "#e290ef",
+                    "error": "#b31b25",
+                    "surface-tint": "#a03a0f",
+                    "tertiary": "#863c96",
+                    "on-surface": "#4e211e",
+                    "surface-container-low": "#ffedeb",
+                    "on-secondary-fixed": "#6a1010",
+                    "on-primary-fixed": "#020000",
+                    "secondary-fixed": "#ffc3bd",
+                    "primary": "#a03a0f",
+                    "surface-container": "#ffe2de",
+                    "on-secondary-fixed-variant": "#912d29",
+                    "on-tertiary-container": "#5e136f",
+                    "outline": "#a36761",
+                    "on-error": "#ffefee",
+                    "on-secondary-container": "#852421",
+                    "on-surface-variant": "#834d48",
+                    "inverse-surface": "#240303",
+                    "primary-fixed": "#fe7e4f",
+                    "tertiary-dim": "#793089",
+                    "on-error-container": "#570008",
+                    "error-container": "#fb5151",
+                    "surface-container-highest": "#ffd3ce",
+                    "surface-container-high": "#ffdad6",
+                    "primary-fixed-dim": "#ed7244",
+                    "tertiary-fixed": "#f19dfe",
+                    "on-tertiary-fixed-variant": "#681f79",
+                    "on-secondary": "#ffefed",
+                    "primary-container": "#fe7e4f",
+                    "inverse-on-surface": "#ce8c86",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#4e211e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        .cloud-shadow {
+            box-shadow: 0 12px 32px -4px rgba(78, 33, 30, 0.06);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-[#ffedeb] dark:bg-slate-900 flex flex-col py-8 px-6 space-y-4 z-50">
+<div class="mb-8">
+<h1 class="text-2xl font-bold tracking-tighter text-[#4e211e] dark:text-white">Festiva</h1>
+<p class="text-xs font-medium opacity-60">Your Digital Concierge</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 p-3 rounded-xl hover:bg-[#ffdad6] transition-colors text-[#4e211e]/60 font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 p-3 rounded-xl hover:bg-[#ffdad6] transition-colors text-[#4e211e]/60 font-medium" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span>Calendar</span>
+</a>
+<a class="flex items-center space-x-3 p-3 rounded-xl text-[#a03a0f] dark:text-[#fe7e4f] font-bold border-r-4 border-[#a03a0f]" href="#">
+<span class="material-symbols-outlined">celebration</span>
+<span>Events</span>
+</a>
+<a class="flex items-center space-x-3 p-3 rounded-xl hover:bg-[#ffdad6] transition-colors text-[#4e211e]/60 font-medium" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold tracking-tight shadow-lg transition-transform active:scale-95">
+            Create Event
+        </button>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-18rem)] h-20 z-40 bg-[#fff4f3]/70 backdrop-blur-xl flex items-center justify-between px-12">
+<div class="flex items-center bg-surface-container-lowest px-4 py-2 rounded-full w-96 cloud-shadow">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full font-medium" placeholder="Search events..." type="text"/>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-[#a03a0f] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-[#a03a0f] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile" data-alt="close-up portrait of a smiling woman with warm lighting and a soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMyRksImFmK_b5KRh3lKBrFP6HL--b_5jmol30l6WtANDLtPqmsRHfpykwlVDEtvoiQdQYn1rGwWdqJJM8exz8oB75pL-X5lbF71zZtg_i8nY0GoeG1F2L5RWi74pXu_RyOIQ-qZWoLLkEw9Ye0ZKbqOzzAbOwO_BFuR8Aa8VulwHHgVI1dkYIwzKRi_TbGf_04MRk9-P3nWGUP-9yvqQ7ikz3q_8cn2NdGWj6o6_4S52nrhLz85qE_EefHEs0cwV_n4IkuOtZ8Qw"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-72 pt-20 min-h-screen">
+<div class="max-w-5xl mx-auto px-12 py-12">
+<!-- Hero Section -->
+<section class="relative rounded-lg overflow-hidden h-[400px] cloud-shadow mb-12">
+<img alt="Event Banner" class="absolute inset-0 w-full h-full object-cover" data-alt="Elegant celebration setting with rose gold streamers, champagne glasses, and soft warm ambient lighting in a high-end interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ0LNR27BqLN457wTQqpinigHz2ZcI8X6j9XjAvchLH2XCwVYIlGgjcEo6z2AambUCYpxcRmkkSct2DqUt9waDSkDe-c1FXoXRBDUZS99PFn6zAPKZFaTdsT0WYyKg6V557mPdbg4M3NnkbSZbPmYdkv3GK_P9wWbKC2us9KLkCyKhHf-rQR6jD7yFqB2tNPKvtLh6we-IxtrLw6SfcNSRML0io63lMvsQmC-so-I_12lMaHdbn6wfb7ttiQ7r_86ueASROMa-Lnv4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12 text-on-primary">
+<span class="label text-xs uppercase tracking-[0.2em] font-bold mb-4 block">Personal Milestone</span>
+<h2 class="text-5xl font-extrabold tracking-tighter leading-none mb-2">Olivia's 30th Jubilee</h2>
+<div class="flex items-center space-x-4 opacity-90 font-medium">
+<span class="flex items-center"><span class="material-symbols-outlined text-sm mr-1">location_on</span> The Glasshouse, NYC</span>
+<span class="flex items-center"><span class="material-symbols-outlined text-sm mr-1">calendar_today</span> October 24, 2024</span>
+</div>
+</div>
+</section>
+<!-- Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Details & Gifts -->
+<div class="col-span-8 space-y-8">
+<!-- Countdown & Status -->
+<div class="bg-surface-container-lowest p-8 rounded-lg cloud-shadow flex items-center justify-between">
+<div>
+<p class="text-xs uppercase tracking-[0.1em] font-bold text-primary mb-1">Event Status</p>
+<h3 class="text-3xl font-bold tracking-tight">Commencing in 24 days</h3>
+</div>
+<div class="flex space-x-2">
+<div class="bg-surface-container-low w-16 h-16 rounded-2xl flex flex-col items-center justify-center">
+<span class="text-xl font-bold text-primary">24</span>
+<span class="text-[10px] uppercase font-bold opacity-60">Days</span>
+</div>
+<div class="bg-surface-container-low w-16 h-16 rounded-2xl flex flex-col items-center justify-center">
+<span class="text-xl font-bold text-primary">12</span>
+<span class="text-[10px] uppercase font-bold opacity-60">Hrs</span>
+</div>
+</div>
+</div>
+<!-- Gift Inspirations (High-End Checklist) -->
+<div class="bg-surface-container-low p-8 rounded-lg">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h4 class="text-2xl font-bold tracking-tight mb-1">Gift Inspirations</h4>
+<p class="text-on-surface-variant text-sm">Curated list for the birthday jubilee</p>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">Add Suggestion</button>
+</div>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex items-center justify-between group">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-high">
+<img alt="Gift item" data-alt="luxury perfume bottle with gold accents on a velvet surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMxFdLpgKx_5JZ3vhiL_fkVTLYPRHxbBmJdgAVOVaD-vJ6AdvtEOy8CcQ7F6S3NGC0fNS1aNkxH63uZkXaZguHB0G71187Xx0jWgN9KcZgVNH5FptjeePvqkgEwx5NFNHVjPtkW-flBic_mAWLaS0t1_i2wqRUjjqKeNc1oP2eq7HPJxvu2hP3gz2hoLbGRURyRf0BMElZGto5350oJSuwSr3dH_IigaIu4i3b3EUHW6oNemU9wR9mOL6EfP8E7QnwubvmVn0D678q"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Vintage Chanel N°5</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest font-semibold">Fragrance</p>
+</div>
+</div>
+<label class="relative flex items-center cursor-pointer">
+<input class="w-6 h-6 rounded-full border-2 border-outline-variant text-primary focus:ring-primary/20 checked:bg-primary transition-all" type="checkbox"/>
+</label>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-high">
+<img alt="Gift item" data-alt="Minimalist luxury watch with white face and tan leather strap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ8FM347Gz6ITOBlq6P1_63GYtGxE0hYc8C2imDSf-cmlWI47rgWVC8_5vMC6Nrpii0v8gUg6I1mFGpUN4Y9-9v3S1z_F3EfxANqoZ6MmHw_IZ3cZV6gNLlmPheo0T5xcWd71KwBWttS4r2OfBpW5hu6UnZHU36_vl3IlYS2ZgWt1SYLAhaUkib75Xisw10sc5xuDKjxWUZz6nO-91Cly9niSAN5z5GPIMOS1nfdV0XPIEaTmMsNfue36v--cRj4Ih4J7N29vueOte"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Leather Minimalist Watch</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest font-semibold">Accessories</p>
+</div>
+</div>
+<label class="relative flex items-center cursor-pointer">
+<input checked="" class="w-6 h-6 rounded-full border-2 border-outline-variant text-primary focus:ring-primary/20 checked:bg-primary transition-all" type="checkbox"/>
+</label>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-high text-center flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">flight_takeoff</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Weekend in Tuscany</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest font-semibold">Experience</p>
+</div>
+</div>
+<label class="relative flex items-center cursor-pointer">
+<input class="w-6 h-6 rounded-full border-2 border-outline-variant text-primary focus:ring-primary/20 checked:bg-primary transition-all" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Reminders & Actions -->
+<div class="col-span-4 space-y-8">
+<!-- Reminders Management -->
+<div class="bg-surface-container-lowest p-8 rounded-lg cloud-shadow">
+<h4 class="text-lg font-bold tracking-tight mb-6">Reminders</h4>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">notifications_active</span>
+</div>
+<div>
+<p class="font-bold text-sm leading-tight">Send Invitations</p>
+<p class="text-xs text-on-surface-variant mt-1">Due in 2 days</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="p-2 bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-secondary text-xl">restaurant</span>
+</div>
+<div>
+<p class="font-bold text-sm leading-tight">Finalize Catering</p>
+<p class="text-xs text-on-surface-variant mt-1">Due Oct 15</p>
+</div>
+</div>
+<div class="flex items-start space-x-4 opacity-50">
+<div class="p-2 bg-surface-container-high rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-sm leading-tight line-through">Secure Venue</p>
+<p class="text-xs text-on-surface-variant mt-1">Completed</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 bg-surface-container-high text-on-surface font-bold rounded-full text-sm hover:bg-surface-container-highest transition-colors">
+                            Manage All Reminders
+                        </button>
+</div>
+<!-- Location Preview Card -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden">
+<div class="h-40 bg-surface-container-highest">
+<img alt="Map View" class="w-full h-full object-cover" data-alt="Stylized architectural detail of a glass building in New York City with sunset reflections" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFlQSHaQehQu1dFNLdexiFCDhGbZzn8kUlrHT5Oqa-on7_Go1Qm0rhit1v_qZkO78l01CrjE54AFiOp05AD8Fq5t96-tkY4QgWHE2BMXE1FJhY-Zjc94J8u-sIraxnJoKrHpBAgMxhrIjdrMa5gbR_DsY-DIykfMcCq5oKdWhYPWqCF9Z5kJaEqI6jzMvKbNqbFtor2NQq3955HP0lwoXWGts0zeIg-mcvt4qR4YcKRYEp5JTZsYFUfa3dw1o5cU_n9QzcTL5CnHaM"/>
+</div>
+<div class="p-6">
+<h5 class="font-bold text-primary mb-1">The Glasshouse</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed">660 12th Ave, New York, NY 10019</p>
+<a class="inline-block mt-4 text-xs font-extrabold uppercase tracking-widest text-primary border-b-2 border-primary/20 pb-1" href="#">Get Directions</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Guest Gallery (Asymmetric Layout Example) -->
+<section class="mt-20">
+<div class="flex justify-between items-center mb-10">
+<h3 class="text-3xl font-bold tracking-tight">Confirmed Guests</h3>
+<div class="flex -space-x-4">
+<img class="w-12 h-12 rounded-full border-4 border-surface" data-alt="professional portrait of a man with spectacles and a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS_O0l6dWkQllXV8E1EePlE6EXdg3CotgqYfkeXUz6_AprW_YjqwzOVg0eiQE3hgHAoeZuYYK6UYWxzW6aFPdukde9xf_xtuNXlZpO4T7PRjbQbuhG8v690mlH8dgOcrg08CZZcUmxrBtZwFBa3dhHn68V1YMxzlNxBXUUcwMrXMqfrsxp1HGXBYkOFEDMv0j1kkKTRmKf6KWDl6mGKwA9gWed4Obm_IKtqMeS_yQsxweVXZy7befxKm2dTii1GgGIiIuSj1HKP9_Y"/>
+<img class="w-12 h-12 rounded-full border-4 border-surface" data-alt="Close up of a young woman with natural light and minimalist jewelry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQolUnwqdFZ63Mh6ax2aeCpvL_jdI-kpZXHHoPj0B_gN59LtIY8FaCI0kGjoZbINF8RK-wxcyiI7adtP6mk1x_286p9vqb6Cq8_unRaxsS2HS9Oz3bd9ftwf8GerOUK3FmZ8h64IkicZeisWVSDFg3Z22UEVg_JUv6vA7842DjCKVOJN9c6xhIsxyBTcYi732mCVXF8a5XMCDuywa5aDhAmvFuuQydCbNU-v_3U985WC28Vk9vz06ePQXBFsYyBpM75tSDRIimG5tY"/>
+<img class="w-12 h-12 rounded-full border-4 border-surface" data-alt="Candid portrait of a young man with a slight smile in a sunlit outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEVf5lW6da-7W40q2upZavzAeDmUzxipY7pdejeZpWk69NQbLX8esIH95AVjyctjbvnkULXzAowLAfvEsYPlCdUrlgu1T2x4MBlSQXxkavUztmXblnblTTk_nCKVdRlM-ZMvIol7Tnr0vPBEoC5HLJUNu_osahK0XfhyVWXf_ryH8HH1bIyNcQe9ilTOV-NrmF9fPQR_Hw2kJQDX1ncoyd_fqjajG83AgBurbbYxKiH0RbqImdPwPOxBHvVXLWSJZ026W-Pei6_9Cw"/>
+<div class="w-12 h-12 rounded-full border-4 border-surface bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-xs">+42</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-6">
+<div class="col-span-2 row-span-2 bg-surface-container-lowest p-1 rounded-2xl cloud-shadow">
+<div class="h-full rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="A group of elegantly dressed friends laughing and celebrating at a stylish indoor party" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpyt0k24BAq68EK5fauhwjnnVf3WuotyzeySswLPwO2bv1EmOyAbHyWTytJePxASJE3G5fe45PTCqXU212d5BrzhTQ8mfsCe8Z08eX5NEnC9u2oDxntPbeuiU_UJ2yvwFzsFyP9XZGxyanvCwUnyZ1EX9-rvRk0ZU3De0-hNqO7NM8keelQ80vJNqmnkXvQO7E6muQfAFiOfrrke6tOA5ovGnqbLzzIj00JF1-t1eeTEVswyyDwkOE6UawNgK--hKkdpIeyN_cR41y"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="text-sm font-bold uppercase tracking-widest">Featured Story</p>
+<p class="text-xl font-bold">The Pre-Jubilee Mixer</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-2xl h-48 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">auto_awesome</span>
+<p class="text-sm font-bold">Party Playlist</p>
+</div>
+</div>
+<div class="bg-primary/5 rounded-2xl h-48 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">photo_camera</span>
+<p class="text-sm font-bold">Photo Stream</p>
+</div>
+</div>
+<div class="col-span-2 bg-surface-container-lowest p-8 rounded-2xl cloud-shadow flex items-center justify-between">
+<div>
+<p class="text-xs uppercase tracking-widest font-bold text-primary-fixed-dim">Dress Code</p>
+<p class="text-lg font-bold">Golden Hour Elegance</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary">styler</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Celebration Drawer (Floating Toast/Action) -->
+<div class="fixed bottom-8 right-8 z-50 glass p-6 rounded-2xl cloud-shadow border border-white/20 w-80">
+<div class="flex items-start justify-between mb-4">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<p class="font-bold text-sm mb-1">RSVP Collection Active</p>
+<p class="text-xs text-on-surface-variant mb-4">You have 12 unread responses from the 'Jubilee' circle.</p>
+<button class="w-full py-2 bg-primary text-on-primary text-xs font-bold rounded-full">View Guest List</button>
+</div>
+</body></html>
+
+<!-- Add Event - Desktop -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Festiva - Create Event</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fff4f3",
+                        "secondary-dim": "#902c28",
+                        "on-primary-fixed-variant": "#591800",
+                        "secondary": "#a03833",
+                        "on-primary": "#ffefeb",
+                        "surface-variant": "#ffd3ce",
+                        "background": "#fff4f3",
+                        "surface-dim": "#ffc7c1",
+                        "outline-variant": "#e09c95",
+                        "surface": "#fff4f3",
+                        "on-tertiary-fixed": "#40004f",
+                        "tertiary-container": "#f19dfe",
+                        "secondary-fixed-dim": "#ffafa8",
+                        "secondary-container": "#ffc3bd",
+                        "on-primary-container": "#491300",
+                        "on-tertiary": "#ffeefc",
+                        "error-dim": "#9f0519",
+                        "primary-dim": "#902e02",
+                        "inverse-primary": "#fe7e4f",
+                        "tertiary-fixed-dim": "#e290ef",
+                        "error": "#b31b25",
+                        "surface-tint": "#a03a0f",
+                        "tertiary": "#863c96",
+                        "on-surface": "#4e211e",
+                        "surface-container-low": "#ffedeb",
+                        "on-secondary-fixed": "#6a1010",
+                        "on-primary-fixed": "#020000",
+                        "secondary-fixed": "#ffc3bd",
+                        "primary": "#a03a0f",
+                        "surface-container": "#ffe2de",
+                        "on-secondary-fixed-variant": "#912d29",
+                        "on-tertiary-container": "#5e136f",
+                        "outline": "#a36761",
+                        "on-error": "#ffefee",
+                        "on-secondary-container": "#852421",
+                        "on-surface-variant": "#834d48",
+                        "inverse-surface": "#240303",
+                        "primary-fixed": "#fe7e4f",
+                        "tertiary-dim": "#793089",
+                        "on-error-container": "#570008",
+                        "error-container": "#fb5151",
+                        "surface-container-highest": "#ffd3ce",
+                        "surface-container-high": "#ffdad6",
+                        "primary-fixed-dim": "#ed7244",
+                        "tertiary-fixed": "#f19dfe",
+                        "on-tertiary-fixed-variant": "#681f79",
+                        "on-secondary": "#ffefed",
+                        "primary-container": "#fe7e4f",
+                        "inverse-on-surface": "#ce8c86",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#4e211e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-[#ffedeb] dark:bg-slate-900 flex flex-col py-8 px-6 space-y-4">
+<div class="mb-8">
+<h1 class="text-2xl font-bold tracking-tighter text-[#4e211e] dark:text-white">Festiva</h1>
+<p class="text-xs font-['Plus_Jakarta_Sans'] tracking-tight text-[#4e211e]/60">Your Digital Concierge</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-[#4e211e]/60 dark:text-slate-400 font-medium hover:bg-[#ffdad6] dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-[#4e211e]/60 dark:text-slate-400 font-medium hover:bg-[#ffdad6] dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span>Calendar</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-[#a03a0f] dark:text-[#fe7e4f] font-bold border-r-4 border-[#a03a0f] hover:bg-[#ffdad6] dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">celebration</span>
+<span>Events</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-xl text-[#4e211e]/60 dark:text-slate-400 font-medium hover:bg-[#ffdad6] dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<button class="mt-auto w-full py-4 px-6 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold tracking-tight shadow-lg shadow-primary/20 hover:scale-95 duration-200 ease-in-out">
+            Create Event
+        </button>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="ml-72 min-h-screen relative">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-18rem)] h-20 z-40 bg-[#fff4f3]/70 dark:bg-slate-950/70 backdrop-blur-xl flex items-center justify-between px-12 shadow-[0_12px_32px_-4px_rgba(78,33,30,0.06)]">
+<div class="flex items-center bg-surface-container-lowest rounded-full px-4 py-2 w-96">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-[10px] uppercase tracking-[0.1em] text-on-surface-variant w-full placeholder:text-on-surface-variant/50" placeholder="SEARCH EVENTS OR PEOPLE" type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#a03a0f] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-[#a03a0f] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up portrait of a stylish woman with confident expression, soft natural lighting, high-end lifestyle aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBHvYDoS3yKXFNqI0NwrOjkoETMFHvDD0UvBBYv9jdnhVtaJ1T9YabF6OMpBqhBAWmI_upvy8ENy3F9nw2byJkyqWf_oVkvAtSPbNA_ayM_GZWB3pcRIgjn7CuwSFAk1_GxfWMZ_wC5hAqSAtKDoTpSyLdHQu6mTZF-kVWqIyZnKyZUMCfuOGr4sPmKBBHkU0LtJHktMR08101yfgKpRf-von2-ovdvYOd07_Og38KA-Aji9qbON4Oe-F1V_F5p5CMithI0sMa-kwD"/>
+</div>
+</div>
+</header>
+<!-- Page Content: Add Event Form -->
+<section class="pt-32 pb-20 px-20 max-w-[1200px] mx-auto">
+<div class="mb-12">
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-2 block">NEW OCCASION</span>
+<h2 class="text-5xl font-extrabold text-on-surface tracking-tight leading-tight">Create a Memory</h2>
+</div>
+<div class="grid grid-cols-12 gap-10">
+<!-- Left Column: Form Fields -->
+<div class="col-span-12 lg:col-span-7 space-y-10">
+<!-- Section: Event Details -->
+<div class="bg-surface-container-low rounded-lg p-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Event Details</h3>
+</div>
+<div class="space-y-6">
+<div class="group">
+<label class="text-[10px] font-bold uppercase tracking-[0.05em] text-on-surface-variant/70 mb-2 block px-1">Event Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-sm px-4 py-4 text-on-surface placeholder:text-on-surface-variant/30 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="What are we celebrating?" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="group">
+<label class="text-[10px] font-bold uppercase tracking-[0.05em] text-on-surface-variant/70 mb-2 block px-1">Category</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-sm px-4 py-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all appearance-none">
+<option>Social Gathering</option>
+<option>Corporate Gala</option>
+<option>Birthday Jubilee</option>
+<option>Private Dinner</option>
+</select>
+</div>
+<div class="group">
+<label class="text-[10px] font-bold uppercase tracking-[0.05em] text-on-surface-variant/70 mb-2 block px-1">Privacy</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-sm px-4 py-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all appearance-none">
+<option>Invite Only</option>
+<option>Public Event</option>
+<option>Private Link</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Date & Time -->
+<div class="bg-surface-container-low rounded-lg p-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Date &amp; Time</h3>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.05em] text-on-surface-variant/70 block px-1">Start Date</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-sm px-4 py-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.05em] text-on-surface-variant/70 block px-1">Start Time</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-sm px-4 py-4 text-on-surface focus:ring-2 focus:ring-primary/40 transition-all" type="time"/>
+</div>
+</div>
+</div>
+<!-- Section: Reminders -->
+<div class="bg-surface-container-low rounded-lg p-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<h3 class="text-xl font-bold text-on-surface tracking-tight">Reminders</h3>
+</div>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center gap-3 bg-surface-container-lowest px-4 py-3 rounded-full cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="rounded-full text-primary focus:ring-primary border-outline-variant/30" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface">1 Hour Before</span>
+</label>
+<label class="flex items-center gap-3 bg-surface-container-lowest px-4 py-3 rounded-full cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded-full text-primary focus:ring-primary border-outline-variant/30" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface">1 Day Before</span>
+</label>
+<label class="flex items-center gap-3 bg-surface-container-lowest px-4 py-3 rounded-full cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded-full text-primary focus:ring-primary border-outline-variant/30" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface">1 Week Before</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Right Column: Image & Actions -->
+<div class="col-span-12 lg:col-span-5 space-y-10">
+<!-- Cover Image Placeholder -->
+<div class="relative group aspect-[4/5] w-full rounded-lg overflow-hidden bg-surface-container-low">
+<img alt="Event preview placeholder" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity" data-alt="high-end dinner party table setting with elegant glassware, warm ambient lighting, and floral centerpieces in a blurry background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoxdodGZksnuJgPiMGReFkHQWhtxMDF6mmam5PskzK6WLuVvaBH8pQnGchE5SrvZNkLy0nGjapUFyHO88KAadm9WBRTDNMQYtgJqzfu30Uo-T3cagLj30My1TADKAmWgOiPlQ_9KxAgcqGkOS7X8unQO-yqzGF0R1u2nRiP-_4ZzG5_aRbqlvt4bmw2PlP85AEDI-ECQQjEaSGKRaahInpyAFqKWyX2OrHH14rmK3AnsPAnINzYWhVeNWDnDocqFRe4T7axBkM3Mpt"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center mb-6 shadow-xl shadow-on-surface/5">
+<span class="material-symbols-outlined text-primary text-3xl">add_a_photo</span>
+</div>
+<h4 class="text-2xl font-bold text-on-surface mb-2">Event Cover</h4>
+<p class="text-sm text-on-surface-variant/80 leading-relaxed">Choose an image that captures the essence of your celebration.</p>
+<button class="mt-8 px-8 py-3 bg-white text-on-surface text-xs font-bold uppercase tracking-widest rounded-full shadow-lg hover:scale-105 transition-transform">
+                                Upload Media
+                            </button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4">
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-xl font-bold text-lg tracking-tight shadow-[0_12px_32px_-4px_rgba(160,58,15,0.3)] hover:scale-[0.98] transition-transform">
+                            Save Celebration
+                        </button>
+<button class="w-full py-5 bg-surface-container-high text-on-secondary-container rounded-xl font-bold text-sm uppercase tracking-[0.1em] hover:bg-surface-container-highest transition-colors">
+                            Discard Draft
+                        </button>
+</div>
+<!-- Celebration Tip (Editorial Note) -->
+<div class="p-8 border border-outline-variant/15 rounded-lg bg-surface-container-lowest/50 backdrop-blur-sm">
+<span class="material-symbols-outlined text-tertiary mb-4">auto_awesome</span>
+<h5 class="text-on-surface font-bold mb-2 tracking-tight">Concierge Tip</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed italic">
+                            "The best events are those that leave room for the unexpected. Set your reminders early, but leave your schedule flexible for the moments that truly matter."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Celebration Drawer (Static Component Sample) -->
+<div class="fixed top-24 right-8 w-80 glass-panel p-6 rounded-lg shadow-[0_12px_32px_-4px_rgba(78,33,30,0.06)] hidden xl:block">
+<h4 class="text-on-surface font-bold mb-4 tracking-tight">Draft Progress</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-sm text-on-surface font-medium">Basic Info</span>
+<span class="ml-auto material-symbols-outlined text-primary text-sm">check_circle</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-sm text-on-surface font-medium">Date &amp; Time</span>
+<span class="ml-auto material-symbols-outlined text-primary text-sm">check_circle</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<span class="text-sm text-on-surface-variant">Guest List</span>
+<span class="ml-auto text-[10px] font-bold text-on-surface-variant/40">PENDING</span>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<div class="flex justify-between text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">
+<span>Completeness</span>
+<span>65%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%]"></div>
+</div>
+</div>
+</div>
+</body></html>
+
+<!-- Dashboard - Desktop -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Festiva - Jubilee Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fff4f3",
+                        "secondary-dim": "#902c28",
+                        "on-primary-fixed-variant": "#591800",
+                        "secondary": "#a03833",
+                        "on-primary": "#ffefeb",
+                        "surface-variant": "#ffd3ce",
+                        "background": "#fff4f3",
+                        "surface-dim": "#ffc7c1",
+                        "outline-variant": "#e09c95",
+                        "surface": "#fff4f3",
+                        "on-tertiary-fixed": "#40004f",
+                        "tertiary-container": "#f19dfe",
+                        "secondary-fixed-dim": "#ffafa8",
+                        "secondary-container": "#ffc3bd",
+                        "on-primary-container": "#491300",
+                        "on-tertiary": "#ffeefc",
+                        "error-dim": "#9f0519",
+                        "primary-dim": "#902e02",
+                        "inverse-primary": "#fe7e4f",
+                        "tertiary-fixed-dim": "#e290ef",
+                        "error": "#b31b25",
+                        "surface-tint": "#a03a0f",
+                        "tertiary": "#863c96",
+                        "on-surface": "#4e211e",
+                        "surface-container-low": "#ffedeb",
+                        "on-secondary-fixed": "#6a1010",
+                        "on-primary-fixed": "#020000",
+                        "secondary-fixed": "#ffc3bd",
+                        "primary": "#a03a0f",
+                        "surface-container": "#ffe2de",
+                        "on-secondary-fixed-variant": "#912d29",
+                        "on-tertiary-container": "#5e136f",
+                        "outline": "#a36761",
+                        "on-error": "#ffefee",
+                        "on-secondary-container": "#852421",
+                        "on-surface-variant": "#834d48",
+                        "inverse-surface": "#240303",
+                        "primary-fixed": "#fe7e4f",
+                        "tertiary-dim": "#793089",
+                        "on-error-container": "#570008",
+                        "error-container": "#fb5151",
+                        "surface-container-highest": "#ffd3ce",
+                        "surface-container-high": "#ffdad6",
+                        "primary-fixed-dim": "#ed7244",
+                        "tertiary-fixed": "#f19dfe",
+                        "on-tertiary-fixed-variant": "#681f79",
+                        "on-secondary": "#ffefed",
+                        "primary-container": "#fe7e4f",
+                        "inverse-on-surface": "#ce8c86",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#4e211e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(24px); }
+        .cloud-shadow { shadow: 0 12px 32px -4px rgba(78, 33, 30, 0.06); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-[#ffedeb] dark:bg-slate-900 flex flex-col py-8 px-6 space-y-4">
+<div class="mb-8 px-2">
+<h1 class="text-2xl font-bold tracking-tighter text-[#4e211e] dark:text-white">Festiva</h1>
+<p class="font-['Plus_Jakarta_Sans'] tracking-tight body-lg leading-relaxed text-[#a03a0f]/70">Your Digital Concierge</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl transition-colors hover:bg-[#ffdad6] text-[#a03a0f] dark:text-[#fe7e4f] font-bold border-r-4 border-[#a03a0f]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl transition-colors hover:bg-[#ffdad6] text-[#4e211e]/60 font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span>Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl transition-colors hover:bg-[#ffdad6] text-[#4e211e]/60 font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="celebration">celebration</span>
+<span>Events</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl transition-colors hover:bg-[#ffdad6] text-[#4e211e]/60 font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<div class="pt-6">
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold flex items-center justify-center space-x-2 shadow-lg">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>Create Event</span>
+</button>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-18rem)] h-20 z-40 bg-[#fff4f3]/70 backdrop-blur-xl flex items-center justify-between px-12">
+<div class="flex-1 max-w-md">
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant material-symbols-outlined" data-icon="search">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg pl-12 pr-4 py-2 font-['Plus_Jakarta_Sans'] uppercase tracking-[0.05em] text-xs focus:ring-2 focus:ring-primary/40" placeholder="SEARCH EVENTS..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-[#a03a0f] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-[#a03a0f] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile" data-alt="professional headshot of a smiling woman with warm lighting and soft background bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHWjkeMbSK4EMJUmuM2FZHKhh23TDQHRriC_xhcYT3EwcK5M2uI3Ti2eRGZX4v7pxiy4dz-cmvRp-P9cPhL_SOYnrzh89zluzb0nK8msMwiTrItg1NHf1Qig3UZfukf04wjjNmcbMrkAMM6uyc2N29xVbsha2i22zgwqQV02bzeBLHWpIL2SuBwlCp_j9upBnSYmJS4QS__TQ1I_rGf_GPXMHNMzRXMSR-rvqemxiUrqFaJaAFETsNdoCWGIQDpRMJszJvUnDKCt8o"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-72 pt-24 min-h-screen px-12 pb-12">
+<div class="flex gap-12">
+<!-- Primary Feed (Asymmetric Layout) -->
+<div class="flex-[2] space-y-12">
+<!-- Hero Section: Featured Event -->
+<section class="relative h-[480px] rounded-lg overflow-hidden flex items-end group">
+<div class="absolute inset-0 z-0">
+<img alt="Sarah's Birthday Bash" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="vibrant birthday party scene with gold balloons, festive table setting, and warm ambient candlelight in a sophisticated venue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTtUSpOyeKjI7v5xpjyLu77JDwoM2_eDKlW8KwHLHA2TAz-0xBVPIOhhGeIa66vVYyNHBlIHetBLB3OM2NzD2ky1vR4DMiTW-0OBLL0NqqXKUqTqzIiBX-YkSTseBfb-c3rarFxtQl246ZOLV3em_U6EDb6yKUQKw3w7AciwdEpFOT3FfIPXDdChGdgYFIuFsiSKKGlFAXT8Gb3RkdqYuN2HBin9ixzq5AxCF6Kwz76MTr9MtRbW-TEDV7hLATLtgd9NZectZaDSZ1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10 p-12 w-full flex justify-between items-end">
+<div class="space-y-4">
+<span class="bg-primary/90 text-on-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Featured Jubilee</span>
+<h2 class="text-5xl font-extrabold text-white tracking-tighter leading-tight">Sarah's Birthday Bash</h2>
+<div class="flex items-center space-x-4 text-white/90">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-medium">The Gilded Terrace, Manhattan</span>
+</div>
+</div>
+<!-- Countdown Glass Morph -->
+<div class="glass-panel p-6 rounded-lg text-on-surface flex space-x-6 shadow-xl border border-white/20">
+<div class="text-center">
+<span class="block text-3xl font-black text-primary">04</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60">Days</span>
+</div>
+<div class="text-center">
+<span class="block text-3xl font-black text-primary">12</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60">Hours</span>
+</div>
+<div class="text-center">
+<span class="block text-3xl font-black text-primary">45</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-60">Mins</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events Grid -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-3xl font-bold tracking-tight text-on-surface">Upcoming Celebrations</h3>
+<a class="text-primary font-bold text-sm uppercase tracking-widest hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group shadow-[0_12px_32px_-4px_rgba(78,33,30,0.06)]">
+<div class="h-64 overflow-hidden">
+<img alt="Gallery Opening" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="minimalist art gallery interior with modern sculptures and abstract paintings under soft museum lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDICiZaeezoR3qlvCu9_YQ1J_rQHKfGadkyl-Y9VY1vVFjQJdeU2YWQvpU89dVIwKSri3cJfhsXU7EkAdkv4GOwPdX4-dIgJ_L_VAkYmlNCTnuuo7XGNnsjRjouppsEgMk1J6g5hGiZAk7Dd5NS5kjMXWR_8HmygNp4FMJ9qweKgerKeSLVY1CCk73v8c087w6KjpwE6nAdtXmLdaibNtx8Iyiwb3Yql7Rm468-Hs-EfN7bkCJ5TbxeEq_M8SoAmCERTXzFY22sfYye"/>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<span class="text-xs font-black uppercase tracking-[0.1em] text-primary/60">Cultural • Oct 24</span>
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span>
+</div>
+<h4 class="text-2xl font-bold text-primary leading-tight">Gallery Opening: Modern Muse</h4>
+<p class="text-on-surface-variant leading-relaxed">An evening of fine art, contemporary sculpture, and curated cocktails.</p>
+<button class="pt-4 flex items-center space-x-2 text-primary font-bold group">
+<span>Details</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group shadow-[0_12px_32px_-4px_rgba(78,33,30,0.06)]">
+<div class="h-64 overflow-hidden">
+<img alt="Wine Tasting" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close-up of a sommelier pouring red wine into a crystal glass in a dimly lit rustic cellar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs7fnuPHL5ZSGqNs4RiLLfdM-sYlq8VtKYrXncIXI5r7JsH63qbQPUtBbwUXxkWhvsClZS-TVuUyFjw-a9eJYQoPmODOnneZjxhOPe97NyJsgRkr09kLd47VOKmOFtZTrJJpv-9G8doSUt9FX_t_VMGsYW2DLWkwUDa9zOVJHsiyxiDIQKeUGJje2p6aae9zzyPUIbDb-x69EgQ9qjdRUZmPRZ7PzvBnjc9VGkTQM6SxFcaoUdR8o912M3R-sIYajtTaivXji3IGLW"/>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<span class="text-xs font-black uppercase tracking-[0.1em] text-primary/60">Lifestyle • Nov 02</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="favorite">favorite</span>
+</div>
+<h4 class="text-2xl font-bold text-primary leading-tight">Artisan Wine Tasting</h4>
+<p class="text-on-surface-variant leading-relaxed">Explore the valleys of Napa with our head sommelier. Limited seating.</p>
+<button class="pt-4 flex items-center space-x-2 text-primary font-bold group">
+<span>Details</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Sidebar: Quick Look -->
+<aside class="flex-1 max-w-sm space-y-12">
+<!-- Quick Look Calendar -->
+<section class="bg-surface-container-low rounded-lg p-8">
+<h3 class="text-xl font-bold mb-6 text-on-surface flex items-center justify-between">
+                        Quick Look
+                        <span class="text-xs uppercase tracking-widest text-primary font-bold">October 2023</span>
+</h3>
+<div class="grid grid-cols-7 gap-2 mb-6">
+<div class="text-[10px] font-black uppercase text-center opacity-40">M</div>
+<div class="text-[10px] font-black uppercase text-center opacity-40">T</div>
+<div class="text-[10px] font-black uppercase text-center opacity-40">W</div>
+<div class="text-[10px] font-black uppercase text-center opacity-40">T</div>
+<div class="text-[10px] font-black uppercase text-center opacity-40">F</div>
+<div class="text-[10px] font-black uppercase text-center opacity-40 text-primary">S</div>
+<div class="text-[10px] font-black uppercase text-center opacity-40 text-primary">S</div>
+<!-- Calendar Days Example -->
+<div class="h-8 flex items-center justify-center text-xs font-medium opacity-40">18</div>
+<div class="h-8 flex items-center justify-center text-xs font-medium opacity-40">19</div>
+<div class="h-8 flex items-center justify-center text-xs font-black bg-white rounded-full text-primary shadow-sm">20</div>
+<div class="h-8 flex items-center justify-center text-xs font-medium">21</div>
+<div class="h-8 flex items-center justify-center text-xs font-medium">22</div>
+<div class="h-8 flex items-center justify-center text-xs font-medium relative">
+                            23
+                            <span class="absolute bottom-1 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+<div class="h-8 flex items-center justify-center text-xs font-medium relative">
+                            24
+                            <span class="absolute bottom-1 w-1 h-1 bg-primary rounded-full"></span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-lowest rounded-lg border-l-4 border-primary">
+<span class="text-[10px] font-bold uppercase tracking-widest opacity-50 block mb-1">Tomorrow • 19:00</span>
+<p class="text-sm font-bold">Sarah's Birthday Bash</p>
+</div>
+<div class="p-4 bg-surface-container-lowest/50 rounded-lg">
+<span class="text-[10px] font-bold uppercase tracking-widest opacity-50 block mb-1">Oct 24 • 18:30</span>
+<p class="text-sm font-bold">Gallery Opening</p>
+</div>
+</div>
+</section>
+<!-- This Month Focus -->
+<section class="space-y-6">
+<h3 class="text-xl font-bold tracking-tight text-on-surface">Upcoming this Month</h3>
+<div class="space-y-8">
+<div class="flex items-center space-x-4 group cursor-pointer">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Corporate Gala" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="formal ballroom with white tables, crystal chandeliers, and purple accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6k3JuDaOLocZjqj78-9VAJeEAMaUuK1ydWRaH8Q8o__qm4avZGgPe7kGX7gKFLsv7G8--y1Oo95A2ED5Z9bloz-Uz-PLAnml0Gr2EZcdeqmqChersV33pz_VMHdZnSJIHebzxbBQIOe-ho15XLvZrXq90EDNhwfocUEjwAxx1ztxpGu_XXZysjJ3yT2y9TIHzi3jbRgnrrPh7bjbz5LUlms1J8vR5NmBXOj6vQaJWVWkGlNB9mi5bvp_Ks7xd6xfsMY86xqtsO45m"/>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Winter Corporate Gala</h5>
+<p class="text-xs text-on-surface-variant font-medium">Nov 12 • Grand Hyatt</p>
+</div>
+<span class="material-symbols-outlined text-primary/40" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center space-x-4 group cursor-pointer">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Charity Brunch" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="garden party brunch setting with floral arrangements, mimosas, and sun-drenched outdoor tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk5V-Ab2Fg33KislN0P-IMROivDWzNyvZ0rcBrqy99UPecM4RJKSgylK3YBsGRFjU9MNCwL4RoCXMAuUpXmDXyE_z3OYPdnQYJJPB98MM6MoxmuEyeToJeYI6OZ4xADPDUNgVsZfPjoIAsNSrd2Y2Cjm9bzhmdxzXsQf2rJykam0qEQxcqAVhAQ2nHAlj8Rsf46jA20Jz3R1aBHtCzAVN-dVL9yrlmrhqMExBwYtbfVsumnHUCWFsc04KvA07NA8LRa0sKRfQA9TVm"/>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Charity Brunch</h5>
+<p class="text-xs text-on-surface-variant font-medium">Nov 18 • Botanical Gardens</p>
+</div>
+<span class="material-symbols-outlined text-primary/40" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center space-x-4 group cursor-pointer">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Music Festival" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="night concert with vibrant laser lights, large crowd silhouettes, and a glowing stage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_Wgnc4GFZ6xMV6KgWANr-KP6Ujwrb5JAOOAM_1AUruE8cf_AcfvzFYs2ZpUdkO3Eo7uCoGmhjiurHgQQQ8sEXtE1usq66C8UDRBzv9kIr-Hn5tdnOuVfNFpmdXGDYXLQ3mMDDv9Z3SVhyl9pSEzwdyNGUQ2zDXU3Ro-CtinI7N6ijte_Vm5xaSvKHXt_H7jFDK7cfwOONUBpr1rZWtdsc0Q9V3X9bV4iDCxLYOsmEAfhooZp9ieYA8RBLBpx17_D6SQab0APj22Jw"/>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Jazz in the Park</h5>
+<p class="text-xs text-on-surface-variant font-medium">Nov 22 • Central Park</p>
+</div>
+<span class="material-symbols-outlined text-primary/40" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold rounded-lg uppercase tracking-widest text-xs hover:bg-surface-container-highest transition-colors">
+                        Discover More Events
+                    </button>
+</section>
+</aside>
+</div>
+</main>
+</body></html>
+
+<!-- Calendar View - Desktop -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fff4f3",
+                    "secondary-dim": "#902c28",
+                    "on-primary-fixed-variant": "#591800",
+                    "secondary": "#a03833",
+                    "on-primary": "#ffefeb",
+                    "surface-variant": "#ffd3ce",
+                    "background": "#fff4f3",
+                    "surface-dim": "#ffc7c1",
+                    "outline-variant": "#e09c95",
+                    "surface": "#fff4f3",
+                    "on-tertiary-fixed": "#40004f",
+                    "tertiary-container": "#f19dfe",
+                    "secondary-fixed-dim": "#ffafa8",
+                    "secondary-container": "#ffc3bd",
+                    "on-primary-container": "#491300",
+                    "on-tertiary": "#ffeefc",
+                    "error-dim": "#9f0519",
+                    "primary-dim": "#902e02",
+                    "inverse-primary": "#fe7e4f",
+                    "tertiary-fixed-dim": "#e290ef",
+                    "error": "#b31b25",
+                    "surface-tint": "#a03a0f",
+                    "tertiary": "#863c96",
+                    "on-surface": "#4e211e",
+                    "surface-container-low": "#ffedeb",
+                    "on-secondary-fixed": "#6a1010",
+                    "on-primary-fixed": "#020000",
+                    "secondary-fixed": "#ffc3bd",
+                    "primary": "#a03a0f",
+                    "surface-container": "#ffe2de",
+                    "on-secondary-fixed-variant": "#912d29",
+                    "on-tertiary-container": "#5e136f",
+                    "outline": "#a36761",
+                    "on-error": "#ffefee",
+                    "on-secondary-container": "#852421",
+                    "on-surface-variant": "#834d48",
+                    "inverse-surface": "#240303",
+                    "primary-fixed": "#fe7e4f",
+                    "tertiary-dim": "#793089",
+                    "on-error-container": "#570008",
+                    "error-container": "#fb5151",
+                    "surface-container-highest": "#ffd3ce",
+                    "surface-container-high": "#ffdad6",
+                    "primary-fixed-dim": "#ed7244",
+                    "tertiary-fixed": "#f19dfe",
+                    "on-tertiary-fixed-variant": "#681f79",
+                    "on-secondary": "#ffefed",
+                    "primary-container": "#fe7e4f",
+                    "inverse-on-surface": "#ce8c86",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#4e211e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Authority: JSON & Design System) -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-[#ffedeb] dark:bg-slate-900 flex flex-col py-8 px-6 space-y-4">
+<div class="mb-8 px-2">
+<h1 class="text-2xl font-bold tracking-tighter text-[#4e211e] dark:text-white">Festiva</h1>
+<p class="text-xs font-['Plus_Jakarta_Sans'] tracking-tight body-lg leading-relaxed opacity-60">Your Digital Concierge</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Dashboard (Inactive) -->
+<a class="flex items-center space-x-4 py-3 px-4 rounded-xl text-[#4e211e]/60 dark:text-slate-400 font-medium hover:bg-[#ffdad6] dark:hover:bg-slate-800 transition-colors scale-95 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Plus_Jakarta_Sans']">Dashboard</span>
+</a>
+<!-- Calendar (Active - Priority Selection) -->
+<a class="flex items-center space-x-4 py-3 px-4 rounded-xl text-[#a03a0f] dark:text-[#fe7e4f] font-bold border-r-4 border-[#a03a0f] hover:bg-[#ffdad6] transition-colors scale-95 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-['Plus_Jakarta_Sans']">Calendar</span>
+</a>
+<!-- Events (Inactive) -->
+<a class="flex items-center space-x-4 py-3 px-4 rounded-xl text-[#4e211e]/60 dark:text-slate-400 font-medium hover:bg-[#ffdad6] dark:hover:bg-slate-800 transition-colors scale-95 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="celebration">celebration</span>
+<span class="font-['Plus_Jakarta_Sans']">Events</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex items-center space-x-4 py-3 px-4 rounded-xl text-[#4e211e]/60 dark:text-slate-400 font-medium hover:bg-[#ffdad6] dark:hover:bg-slate-800 transition-colors scale-95 duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans']">Profile</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-[#4e211e]/10">
+<button class="w-full py-4 px-6 rounded-full bg-gradient-to-tr from-primary to-primary-container text-on-primary font-bold shadow-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm">add</span>
+                Create Event
+            </button>
+</div>
+</aside>
+<!-- TopNavBar (Authority: JSON & Design System) -->
+<header class="fixed top-0 right-0 w-[calc(100%-18rem)] h-20 z-40 bg-[#fff4f3]/70 dark:bg-slate-950/70 backdrop-blur-xl flex items-center justify-between px-12 shadow-[0_12px_32px_-4px_rgba(78,33,30,0.06)]">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md">
+<span class="absolute inset-y-0 left-4 flex items-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-full pl-12 pr-4 py-2 text-xs font-['Plus_Jakarta_Sans'] uppercase tracking-[0.05em] focus:ring-2 focus:ring-primary/40" placeholder="SEARCH EVENTS, GUESTS..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-8">
+<div class="flex items-center space-x-6 text-[#a03a0f]">
+<button class="material-symbols-outlined hover:opacity-80 transition-opacity" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined hover:opacity-80 transition-opacity" data-icon="settings">settings</button>
+</div>
+<div class="flex items-center space-x-4 pl-8 border-l border-on-surface/10">
+<div class="text-right hidden xl:block">
+<p class="text-xs font-bold leading-tight uppercase tracking-widest">Julianna Thorne</p>
+<p class="text-[10px] opacity-60">PREMIUM CONCIERGE</p>
+</div>
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm" data-alt="professional portrait of a sophisticated woman with a warm smile in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRV-fcaa6iPsYBVgDlOUJLrbL8ua-PZ6LFO7jjX-M2VIn2pJOK2XLm8riEJtm11tcn-CzQ_G-Y_60IUuC2LJyBe6P-2-ogyyo2y-pdjy0X0Yw47z8l2xl1YDZYIBQzk8CizoD4Jo0EYvvUAVuJWMl7B9c3EO6SbcGbZ974OIJQPeJymixkl_lBg8xoi8bmihOBlqlf5mSi0AjKRId4YOamfMB5tEbLlk9jjKHWhc_lrGPqOL50jLbAYAV99H0uIFrM8hLhXu_aLE-i"/>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="ml-72 pt-20 h-screen flex">
+<!-- Calendar Section (Left 70%) -->
+<section class="flex-1 p-8 bg-surface overflow-y-auto">
+<div class="max-w-6xl mx-auto">
+<header class="flex items-center justify-between mb-12">
+<div>
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tighter mb-2">September 2024</h2>
+<p class="text-on-surface-variant font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            3 Major Celebrations this month
+                        </p>
+</div>
+<div class="flex bg-surface-container-low p-1.5 rounded-full">
+<button class="px-6 py-2 rounded-full bg-surface-container-lowest shadow-sm font-bold text-xs uppercase tracking-widest">Month</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:bg-surface-container-high transition-colors">Week</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:bg-surface-container-high transition-colors">Day</button>
+</div>
+</header>
+<!-- Calendar Grid (Editorial Style) -->
+<div class="grid grid-cols-7 gap-4">
+<!-- Day Headers -->
+<div class="text-center pb-4 text-[10px] font-extrabold uppercase tracking-[0.2em] text-on-surface-variant/60">Mon</div>
+<div class="text-center pb-4 text-[10px] font-extrabold uppercase tracking-[0.2em] text-on-surface-variant/60">Tue</div>
+<div class="text-center pb-4 text-[10px] font-extrabold uppercase tracking-[0.2em] text-on-surface-variant/60">Wed</div>
+<div class="text-center pb-4 text-[10px] font-extrabold uppercase tracking-[0.2em] text-on-surface-variant/60">Thu</div>
+<div class="text-center pb-4 text-[10px] font-extrabold uppercase tracking-[0.2em] text-on-surface-variant/60">Fri</div>
+<div class="text-center pb-4 text-[10px] font-extrabold uppercase tracking-[0.2em] text-on-surface-variant/60">Sat</div>
+<div class="text-center pb-4 text-[10px] font-extrabold uppercase tracking-[0.2em] text-on-surface-variant/60">Sun</div>
+<!-- Calendar Cells -->
+<!-- Empty/Prev Month -->
+<div class="aspect-square bg-surface-container-low/30 rounded-lg p-4 opacity-30 select-none">
+<span class="text-sm font-bold">28</span>
+</div>
+<div class="aspect-square bg-surface-container-low/30 rounded-lg p-4 opacity-30 select-none">
+<span class="text-sm font-bold">29</span>
+</div>
+<div class="aspect-square bg-surface-container-low/30 rounded-lg p-4 opacity-30 select-none">
+<span class="text-sm font-bold">30</span>
+</div>
+<div class="aspect-square bg-surface-container-low/30 rounded-lg p-4 opacity-30 select-none">
+<span class="text-sm font-bold">31</span>
+</div>
+<!-- Current Month Starts -->
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">01</span>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">02</span>
+<div class="absolute bottom-4 left-4 flex gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">03</span>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">04</span>
+</div>
+<!-- ACTIVE DAY: SEPT 5 (Event Day) -->
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-[0_8px_24px_rgba(160,58,15,0.12)] border-2 border-primary/20 hover:scale-[1.02] transition-transform cursor-pointer relative overflow-hidden group">
+<span class="text-sm font-extrabold text-primary">05</span>
+<div class="mt-2">
+<div class="text-[10px] font-bold text-primary-dim uppercase tracking-tighter leading-tight bg-primary-container/20 p-1 rounded">Annual Gala Night</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">06</span>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">07</span>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">08</span>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">09</span>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative">
+<span class="text-sm font-bold">10</span>
+<div class="absolute bottom-4 left-4 flex gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+</div>
+</div>
+<!-- More cells to fill the editorial grid -->
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">11</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">12</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">13</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">14</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">15</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">16</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">17</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">18</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">19</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">20</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">21</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">22</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">23</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">24</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">25</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">26</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">27</span></div>
+<div class="aspect-square bg-surface-container-lowest rounded-lg p-4 shadow-sm hover:scale-[1.02] transition-transform cursor-pointer relative"><span class="text-sm font-bold">28</span></div>
+</div>
+</div>
+</section>
+<!-- "Celebration Drawer" Details Sidebar (Right 30%) -->
+<aside class="w-[450px] bg-surface-container-lowest/70 backdrop-blur-2xl p-12 overflow-y-auto relative z-10 border-l border-outline-variant/10">
+<header class="mb-12">
+<p class="text-[10px] font-extrabold text-primary tracking-[0.3em] uppercase mb-4">Daily Focus</p>
+<h3 class="text-5xl font-black text-on-surface tracking-tighter leading-[0.9]">Thursday Sept 05</h3>
+</header>
+<!-- Event Highlight Card -->
+<div class="space-y-12">
+<div class="group cursor-pointer">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/5] mb-6 shadow-2xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="opulent gala dinner setting with crystal chandeliers, floral arrangements, and golden lighting on long banquet tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxiKgs6kfwF6bjne7QqhBnk7JNHfEJLNUnU5_qp1G4yl3GSa1H5RBYI6dcBeWtmWmb9nXqu3l8rUrME87RlBtkPyuHYpgJDizasblmxG9_-rru7nUt9IHHIgVt_-a7pVu9wOlMEHImGO11EGcP40XCODR94kMMB22u0mYFdLB_wgY3aXAeGnnwW0Alc4mO4SmCXd6vNw_GFbQZemiyC4ZVhe4RsqIwgTqQiQpUvgSXZyMgkKGil5g5cjBsYueG0QEbJ1qYmWkiciun"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#4e211e] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md text-on-primary text-[10px] font-bold uppercase tracking-widest mb-3">Priority 1</span>
+<h4 class="text-white text-2xl font-bold leading-tight">Annual Gala Night: A Jubilee Masquerade</h4>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div>
+<p class="text-xs font-extrabold uppercase tracking-widest text-on-surface-variant">Time</p>
+<p class="text-on-surface font-medium">19:00 — 02:00</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<p class="text-xs font-extrabold uppercase tracking-widest text-on-surface-variant">Location</p>
+<p class="text-on-surface font-medium">The Grand Ballroom, Level 4</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+<div>
+<p class="text-xs font-extrabold uppercase tracking-widest text-on-surface-variant">Guest List</p>
+<div class="flex -space-x-2 mt-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" data-alt="portrait of a man in a formal suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcaFqsZangn6N0061BRYwBM0rRXgLgcYJOZjgLXMlMQmdIVxhJBHn1gcFfQbryREe65YFQ8KuivCUT3CYxYXTv5g6VjhAaTWETVaPqZeT8fGGtYRDdNV-Nu2xOZfP0REDFtAPPfoZU-BsGOichAGjhwxGRfXOpzItA_HiIf4irt2_VHy-qtdax_u9RLERaEUh6A8qnpnk6ESgcBRXg79rf6vz4xQ9WphFJLRjRxlfSftRL0G5zykQXJ9gGM-Qh6IoAGhcOAyCdPYYR"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" data-alt="portrait of a woman in evening wear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiy-gEITGeJx-vcLAH9dBpRpqEmpTKtUHgpPzkF3t-0TDTaRMmrt7BJ-7MOmWJuUannv-ZIOOTRUnlbLmWtVFy8okWvIWqaYfbLPRIlaK0KPl6rnuM9tkZfmR2dnRAZGbxflVkDiEyHsghjaku7ySl6k_kiPd1TJh5IXF78syzfChACOmByzcy2mbWYh_24QP8AC-yUcmjp1aGGIEOcYd024IfAQrtzxXnkcRGP6xAioKrpA6oBKm7-spj0y_kYLyMzNo_NSIsAeSr"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" data-alt="close up of a stylish man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJEm-4Pns8SpXrz864uvkMU_jZAF7LQo65myggr_21TmfKGbd7WTt8lYf_F-esns2y8OAdkumE6PYe72VT6OKe35RrpShXy1StiLaCwioPrqbebeqb9hDysdI-zgYaYYOpHUIExwYdey91FH6AtQ6qxqb-WMjH95PDuuSZTztOyl-k4ye-rVhA5eRAAIegEgb1p5Kpxm93qUuiOMnDxeXlnWmq8DK8x_04JRVn9n8d_J8AuvucI8Yu6poq_BV-v0XuMPikaSP2BIqP"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-surface-container-lowest flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Event (Subtle) -->
+<div class="pt-8 border-t border-outline-variant/20">
+<div class="flex items-center justify-between mb-4">
+<h5 class="text-sm font-extrabold uppercase tracking-widest">Also Today</h5>
+<span class="text-[10px] text-on-surface-variant">09:00 AM</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors cursor-pointer">
+<p class="font-bold text-on-surface">Catering Final Walkthrough</p>
+<p class="text-xs text-on-surface-variant mt-1">Reviewing the Jubilee Tasting Menu with Chef Moretti.</p>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="grid grid-cols-2 gap-4 mt-8">
+<button class="py-4 px-4 rounded-2xl bg-surface-container-high text-primary font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">
+                        Edit Event
+                    </button>
+<button class="py-4 px-4 rounded-2xl bg-primary text-on-primary font-bold text-xs uppercase tracking-widest shadow-xl hover:translate-y-[-2px] transition-all">
+                        Invite More
+                    </button>
+</div>
+</div>
+</aside>
+</main>
+</body></html>
