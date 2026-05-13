@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://event-reminder-backend-production.up.railway.app:path*" },
+    { "source": "/api/:path*", "destination": "https://event-reminder-backend-production.up.railway.app/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
