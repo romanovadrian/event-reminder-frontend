@@ -5,10 +5,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const repoName = '/event-reminder-frontend'; 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={repoName}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
