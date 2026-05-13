@@ -1,5 +1,4 @@
 {
-  "homepage": "github.io",
   "version": "0.1.0",
   "private": true,
   "proxy": "https://event-reminder-backend-production.up.railway.app",
