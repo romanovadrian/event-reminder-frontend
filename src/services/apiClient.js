@@ -1,4 +1,4 @@
-const ENVIRONMENT = process.env.ENVIRONMENT
+const REACT_APP_ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT
 
 function buildHeaders(token, customHeaders) {
   const headers = {
@@ -14,10 +14,12 @@ function buildHeaders(token, customHeaders) {
 
 async function request(path, options = {}) {
   let url;
-  if (ENVIRONMENT === 'production') {
+  if (REACT_APP_ENVIRONMENT === 'production') {
     url = `/api${path}`;
+    console.log('Using proxy for API requests in production', process.env);
   } else {
     url = path;
+    console.log('Using direct API requests in development', process.env);
   }
   
   const response = await fetch(url, options);
