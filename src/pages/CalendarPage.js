@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useReminders } from '../context/ReminderContext';
 import { daysUntil, eventTypeIcon } from '../utils/reminderEngine';
 
@@ -21,23 +22,51 @@ function CalendarPage() {
   const { reminders, isLoading, error, refresh } = useReminders();
   const activeReminders = reminders.filter((r) => r.is_active);
   const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth();
+  const [year, setYear] = useState(today.getFullYear());
+  const [month, setMonth] = useState(today.getMonth());
   const todayDate = today.getDate();
   const days = getCalendarDays(year, month);
-  const monthLabel = today.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  const getMonthLabel = () => new Date(year, month).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
   function getRemindersForDay(day) {
     const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     return activeReminders.filter((r) => r.event_date === dateStr);
   }
 
+  function nextMonth() {
+    setMonth((prev) => {
+      if (prev === 11) {
+        setYear((y) => y + 1);
+        return 0;
+      }
+      return prev + 1;
+    });
+  }
+  
+  function prevMonth() {  
+    setMonth((prev) => {
+      if (prev === 0) {
+        setYear((y) => y - 1);
+        return 11;
+      }
+      return prev - 1;
+    });
+  }
+
+  function Header() {
+    return (
+    <div className="cal-header">
+      <button onClick={prevMonth}>Previous</button>
+      <h2 className="cal-month">{getMonthLabel()}</h2>
+      <button onClick={nextMonth}>Next</button>
+    </div>
+    );
+  }
+
   if (isLoading) {
     return (
       <div className="cal">
-        <div className="cal-header">
-          <h2 className="cal-month">{monthLabel}</h2>
-        </div>
+        <Header />
         <p className="cal-hint">Loading…</p>
       </div>
     );
@@ -46,9 +75,7 @@ function CalendarPage() {
   if (error) {
     return (
       <div className="cal">
-        <div className="cal-header">
-          <h2 className="cal-month">{monthLabel}</h2>
-        </div>
+        <Header />
         <p className="cal-hint">{error}</p>
         <button className="button-secondary" onClick={refresh}>Retry</button>
       </div>
@@ -57,16 +84,16 @@ function CalendarPage() {
 
   return (
     <div className="cal">
-      <div className="cal-header">
-        <h2 className="cal-month">{monthLabel}</h2>
-      </div>
+      <Header />
 
       <div className="cal-grid">
         {DAYS.map((d) => (
           <div key={d} className="cal-day-label">{d}</div>
         ))}
         {days.map((day, i) => {
-          if (day === null) return <div key={`blank-${i}`} className="cal-cell cal-cell--blank" />;
+          if (day === null) {
+            return <div key={`blank-${i}`} className="cal-cell cal-cell--blank" />;
+          }
           const reminders = getRemindersForDay(day);
           const isToday = day === todayDate;
           return (
