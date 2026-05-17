@@ -7,13 +7,13 @@ import {
   useReducer,
 } from 'react';
 import {
-  fetchUsers,
   getStoredToken,
   login as loginRequest,
   logout as logoutRequest,
 } from '../services/authService';
+import { decodeJwtToken } from '../utils/jwtUtils';
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 const initialState = {
   token: null,
@@ -65,6 +65,15 @@ function authReducer(state, action) {
   }
 }
 
+function buildUserDataFromToken(token) {
+  const decodedTokenData = decodeJwtToken(token);
+  return {
+    id: decodedTokenData?.sub,
+    full_name: decodedTokenData?.full_name,
+    email: decodedTokenData?.mail,
+  }
+}
+
 export function AuthProvider({ children }) {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
@@ -81,13 +90,11 @@ export function AuthProvider({ children }) {
       }
 
       try {
-        const users = await fetchUsers(token);
-        const firstUser = Array.isArray(users) ? users[0] || null : null;
-
+        const userData = buildUserDataFromToken(token);
         if (isMounted) {
           dispatch({
             type: 'BOOTSTRAP_DONE',
-            payload: { token, user: firstUser },
+            payload: { token, user: userData },
           });
         }
       } catch (error) {
@@ -107,16 +114,11 @@ export function AuthProvider({ children }) {
   const login = useCallback(async (credentials) => {
     dispatch({ type: 'LOGIN_START' });
     try {
-      const tokenData = await loginRequest(credentials);
-      const users = await fetchUsers(tokenData.access_token);
-      const firstUser = Array.isArray(users) ? users[0] || null : null;
-
+      const { access_token: token } = await loginRequest(credentials);
+    const userData = buildUserDataFromToken(token);
       dispatch({
         type: 'LOGIN_SUCCESS',
-        payload: {
-          token: tokenData.access_token,
-          user: firstUser,
-        },
+        payload: { token, user: userData },
       });
     } catch (error) {
       dispatch({ type: 'AUTH_ERROR', payload: error.message });
