@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useReminders } from '../context/ReminderContext';
 import { daysUntil, eventTypeIcon } from '../utils/reminderEngine';
+import ReminderItem  from './ReminderItem';
 
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
@@ -31,6 +32,11 @@ function CalendarPage() {
   function getRemindersForDay(day) {
     const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     return activeReminders.filter((r) => r.event_date === dateStr);
+  }
+
+  function getRemindersForMonth() {
+    const monthStr = `${year}-${String(month + 1).padStart(2, '0')}`;
+    return activeReminders.filter((r) => r.event_date.startsWith(monthStr));
   }
 
   function nextMonth() {
@@ -117,20 +123,15 @@ function CalendarPage() {
       {/* Upcoming sidebar */}
       <div className="cal-upcoming">
         <h3 className="cal-upcoming-title">This month</h3>
-        {activeReminders.filter((r) => daysUntil(r.event_date) <= 30).length === 0 ? (
+        {getRemindersForMonth().length === 0 ? (
           <p className="cal-upcoming-empty">No events this month.</p>
         ) : (
           <ul className="cal-upcoming-list">
-            {activeReminders
+            {getRemindersForMonth()
               .sort((a, b) => daysUntil(a.event_date) - daysUntil(b.event_date))
-              .filter((r) => daysUntil(r.event_date) <= 30)
-              .slice(0, 5)
               .map((r) => (
                 <li key={r.id} className="cal-upcoming-item">
-                  <span className="cal-upcoming-date">
-                    {new Date(r.event_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                  </span>
-                  <span className="cal-upcoming-name">{r.title}</span>
+                  <ReminderItem reminder={r} />
                 </li>
               ))}
           </ul>
