@@ -1,19 +1,19 @@
-import { useCallback, useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import { useReminders } from '../context/ReminderContext';
-import { useUsers } from '../context/UserContext';
+import { useCallback, useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { useReminders } from "../context/ReminderContext";
+import { useUsers } from "../context/UserContext";
 import {
   assignUserToReminder,
   listReminderUsers,
   unassignUserFromReminder,
-} from '../services/reminderService';
+} from "../services/reminderService";
 import {
   daysUntil,
   daysUntilLabel,
   eventTypeIcon,
   eventTypeLabel,
-} from '../utils/reminderEngine';
+} from "../utils/reminderEngine";
 
 function ReminderDetailPage() {
   const { reminderId } = useParams();
@@ -51,9 +51,13 @@ function ReminderDetailPage() {
     return (
       <div className="detail">
         <div className="detail-empty">
-          <span className="material-symbols-outlined detail-empty-icon">search_off</span>
+          <span className="material-symbols-outlined detail-empty-icon">
+            search_off
+          </span>
           <p className="detail-empty-title">Reminder not found</p>
-          <Link to="/" className="button-block">Back to Dashboard</Link>
+          <Link to="/" className="button-block">
+            Back to Dashboard
+          </Link>
         </div>
       </div>
     );
@@ -90,11 +94,12 @@ function ReminderDetailPage() {
   }
 
   async function handleDelete() {
-    if (!window.confirm(`Delete "${reminder.title}"? This cannot be undone.`)) return;
+    if (!window.confirm(`Delete "${reminder.title}"? This cannot be undone.`))
+      return;
     setBusy(true);
     try {
       await removeReminder(reminderId);
-      navigate('/');
+      navigate("/");
     } catch (err) {
       setAssignError(err.message);
       setBusy(false);
@@ -110,13 +115,15 @@ function ReminderDetailPage() {
         </Link>
         <div className="detail-header-body">
           <span className="detail-badge">
-            <span className="material-symbols-outlined">{eventTypeIcon(reminder.event_type)}</span>
+            <span className="material-symbols-outlined">
+              {eventTypeIcon(reminder.event_type)}
+            </span>
             {eventTypeLabel(reminder.event_type)}
           </span>
           <h2 className="detail-title">{reminder.title}</h2>
         </div>
         <span
-          className={`detail-countdown${days <= 3 ? ' detail-countdown--urgent' : ''}`}
+          className={`detail-countdown${days <= 3 ? " detail-countdown--urgent" : ""}`}
         >
           {daysUntilLabel(days)}
         </span>
@@ -125,33 +132,39 @@ function ReminderDetailPage() {
       {/* ── Info card ── */}
       <div className="detail-info">
         <div className="detail-info-row">
-          <span className="material-symbols-outlined detail-info-icon">calendar_month</span>
+          <span className="material-symbols-outlined detail-info-icon">
+            calendar_month
+          </span>
           <div>
             <p className="detail-info-label">Event Date</p>
             <p className="detail-info-value">
-              {new Date(reminder.event_date).toLocaleDateString('en-US', {
-                weekday: 'long',
-                month: 'long',
-                day: 'numeric',
-                year: 'numeric',
+              {new Date(reminder.event_date).toLocaleDateString("en-US", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
+                year: "numeric",
               })}
             </p>
           </div>
         </div>
         <div className="detail-info-row">
-          <span className="material-symbols-outlined detail-info-icon">notifications</span>
+          <span className="material-symbols-outlined detail-info-icon">
+            notifications
+          </span>
           <div>
             <p className="detail-info-label">Remind</p>
             <p className="detail-info-value">
               {reminder.remind_days_before === 0
-                ? 'On the day'
-                : `${reminder.remind_days_before} day${reminder.remind_days_before > 1 ? 's' : ''} before`}
+                ? "On the day"
+                : `${reminder.remind_days_before} day${reminder.remind_days_before > 1 ? "s" : ""} before`}
             </p>
           </div>
         </div>
         {reminder.notes && (
           <div className="detail-info-row">
-            <span className="material-symbols-outlined detail-info-icon">sticky_note_2</span>
+            <span className="material-symbols-outlined detail-info-icon">
+              sticky_note_2
+            </span>
             <div>
               <p className="detail-info-label">Notes</p>
               <p className="detail-info-value">{reminder.notes}</p>
@@ -178,7 +191,10 @@ function ReminderDetailPage() {
           <p className="detail-hint">Loading assignments…</p>
         ) : assignments.length === 0 ? (
           <div className="detail-assign-empty">
-            <p>No users assigned yet. Assign a user below to notify them about this event.</p>
+            <p>
+              No users assigned yet. Assign a user below to notify them about
+              this event.
+            </p>
           </div>
         ) : (
           <ul className="detail-assign-list">
@@ -189,17 +205,17 @@ function ReminderDetailPage() {
                 </div>
                 <div className="detail-assign-body">
                   <p className="detail-assign-name">
-                    {a.user?.full_name || a.user?.email || 'Unknown user'}
+                    {a.user?.full_name || a.user?.email || "Unknown user"}
                   </p>
                   <p className="detail-assign-meta">
-                    Notify at {a.notify_time?.slice(0, 5) || '09:00'}
+                    Notify at {a.notify_time?.slice(0, 5) || "09:00"}
                   </p>
                 </div>
                 <button
                   className="detail-assign-remove"
                   onClick={() => handleUnassign(a.user_id)}
                   disabled={busy}
-                  aria-label={`Remove ${a.user?.full_name || 'user'}`}
+                  aria-label={`Remove ${a.user?.full_name || "user"}`}
                 >
                   <span className="material-symbols-outlined">close</span>
                 </button>
@@ -220,7 +236,9 @@ function ReminderDetailPage() {
                     onClick={() => handleAssign(user.id)}
                     disabled={busy}
                   >
-                    <span className="material-symbols-outlined">person_add</span>
+                    <span className="material-symbols-outlined">
+                      person_add
+                    </span>
                     {user.full_name || user.email}
                   </button>
                 </li>

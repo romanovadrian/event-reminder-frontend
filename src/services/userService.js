@@ -1,7 +1,7 @@
-import { apiGet, apiPost } from './apiClient';
+import { apiGet, apiPost } from "./apiClient";
 
 export async function listUsers(token) {
-  return apiGet('/users', token);
+  return apiGet("/users", token);
 }
 
 export async function getUser(token, userId) {
@@ -9,5 +9,5 @@ export async function getUser(token, userId) {
 }
 
 export async function createUser(token, userData) {
-  return apiPost('/users', token, userData);
+  return apiPost("/users", token, userData);
 }

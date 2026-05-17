@@ -1,5 +1,5 @@
-import { Navigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated, isLoading } = useAuth();
@@ -14,7 +14,8 @@ function ProtectedRoute({ children }) {
             <p className="section-kicker">Checking session</p>
             <h1 className="page-title">Restoring your reminder space</h1>
             <p className="page-copy">
-              Hang tight — we're confirming your session and loading your reminders.
+              Hang tight — we're confirming your session and loading your
+              reminders.
             </p>
           </div>
         </section>

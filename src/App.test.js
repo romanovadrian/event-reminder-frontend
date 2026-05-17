@@ -77,7 +77,7 @@ function renderAuthenticatedAt(route) {
   return render(
     <MemoryRouter future={routerFuture} initialEntries={[route]}>
       <App />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 }
 

@@ -12,7 +12,7 @@ export function daysUntil(dateString) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const [, month, day] = dateString.split('-').map(Number);
+  const [, month, day] = dateString.split("-").map(Number);
 
   // Try this year first
   let next = new Date(today.getFullYear(), month - 1, day);
@@ -41,8 +41,8 @@ export function upcomingReminders(reminders, days = 30) {
  * Format a days-until value into a human-friendly label.
  */
 export function daysUntilLabel(n) {
-  if (n === 0) return 'Today';
-  if (n === 1) return 'Tomorrow';
+  if (n === 0) return "Today";
+  if (n === 1) return "Tomorrow";
   return `${n} days`;
 }
 
@@ -51,11 +51,11 @@ export function daysUntilLabel(n) {
  */
 export function eventTypeLabel(eventType) {
   const labels = {
-    birthday: 'Birthday',
-    anniversary: 'Anniversary',
-    custom: 'Event',
+    birthday: "Birthday",
+    anniversary: "Anniversary",
+    custom: "Event",
   };
-  return labels[eventType] || 'Event';
+  return labels[eventType] || "Event";
 }
 
 /**
@@ -63,9 +63,9 @@ export function eventTypeLabel(eventType) {
  */
 export function eventTypeIcon(eventType) {
   const icons = {
-    birthday: 'cake',
-    anniversary: 'favorite',
-    custom: 'celebration',
+    birthday: "cake",
+    anniversary: "favorite",
+    custom: "celebration",
   };
-  return icons[eventType] || 'event';
+  return icons[eventType] || "event";
 }

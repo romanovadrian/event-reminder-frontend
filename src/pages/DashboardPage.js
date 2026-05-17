@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
-import { useReminders } from '../context/ReminderContext';
+import { Link } from "react-router-dom";
+import { useReminders } from "../context/ReminderContext";
 import {
   daysUntil,
   eventTypeIcon,
   eventTypeLabel,
   upcomingReminders,
-} from '../utils/reminderEngine';
-import ReminderItem from './ReminderItem';
+} from "../utils/reminderEngine";
+import ReminderItem from "./ReminderItem";
 
 function DashboardPage() {
   const { reminders, isLoading, error, refresh } = useReminders();
@@ -17,7 +17,9 @@ function DashboardPage() {
     return (
       <div className="dash">
         <div className="dash-empty">
-          <span className="material-symbols-outlined dash-empty-icon">hourglass_top</span>
+          <span className="material-symbols-outlined dash-empty-icon">
+            hourglass_top
+          </span>
           <p className="dash-empty-title">Loading reminders…</p>
         </div>
       </div>
@@ -28,10 +30,15 @@ function DashboardPage() {
     return (
       <div className="dash">
         <div className="dash-empty">
-          <span className="material-symbols-outlined dash-empty-icon">error_outline</span>
+          <span className="material-symbols-outlined dash-empty-icon">
+            error_outline
+          </span>
           <p className="dash-empty-title">Something went wrong</p>
           <p className="dash-empty-copy">{error}</p>
-          <button className="dash-action-btn dash-action-btn--secondary" onClick={refresh}>
+          <button
+            className="dash-action-btn dash-action-btn--secondary"
+            onClick={refresh}
+          >
             <span className="material-symbols-outlined">refresh</span>
             Try again
           </button>
@@ -57,17 +64,19 @@ function DashboardPage() {
               <p className="dash-spotlight-notes">{spotlight.notes}</p>
             )}
             <p className="dash-spotlight-date">
-              {new Date(spotlight.event_date).toLocaleDateString('en-US', {
-                weekday: 'long',
-                month: 'long',
-                day: 'numeric',
+              {new Date(spotlight.event_date).toLocaleDateString("en-US", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
               })}
             </p>
           </div>
           <div className="dash-countdown" aria-label="Countdown">
-            <span className="dash-countdown-value">{daysUntil(spotlight.event_date)}</span>
+            <span className="dash-countdown-value">
+              {daysUntil(spotlight.event_date)}
+            </span>
             <span className="dash-countdown-unit">
-              {daysUntil(spotlight.event_date) === 1 ? 'day left' : 'days left'}
+              {daysUntil(spotlight.event_date) === 1 ? "day left" : "days left"}
             </span>
           </div>
         </section>
@@ -75,11 +84,17 @@ function DashboardPage() {
 
       {/* ── Quick actions ── */}
       <div className="dash-actions">
-        <Link to="/reminders/new" className="dash-action-btn dash-action-btn--primary">
+        <Link
+          to="/reminders/new"
+          className="dash-action-btn dash-action-btn--primary"
+        >
           <span className="material-symbols-outlined">add</span>
           New Reminder
         </Link>
-        <Link to="/calendar" className="dash-action-btn dash-action-btn--secondary">
+        <Link
+          to="/calendar"
+          className="dash-action-btn dash-action-btn--secondary"
+        >
           <span className="material-symbols-outlined">calendar_month</span>
           View Calendar
         </Link>
@@ -89,17 +104,24 @@ function DashboardPage() {
       <section className="dash-upcoming" aria-label="Upcoming reminders">
         <div className="dash-section-header">
           <h3 className="dash-section-title">Upcoming Reminders</h3>
-          <span className="dash-section-count">{upcoming.length} in next 30 days</span>
+          <span className="dash-section-count">
+            {upcoming.length} in next 30 days
+          </span>
         </div>
 
         {upcoming.length === 0 ? (
           <div className="dash-empty">
-            <span className="material-symbols-outlined dash-empty-icon">event_available</span>
+            <span className="material-symbols-outlined dash-empty-icon">
+              event_available
+            </span>
             <p className="dash-empty-title">No upcoming reminders</p>
             <p className="dash-empty-copy">
               Add your first reminder to start tracking the moments that matter.
             </p>
-            <Link to="/reminders/new" className="dash-action-btn dash-action-btn--primary">
+            <Link
+              to="/reminders/new"
+              className="dash-action-btn dash-action-btn--primary"
+            >
               <span className="material-symbols-outlined">add</span>
               Create Reminder
             </Link>
@@ -109,7 +131,7 @@ function DashboardPage() {
             {upcoming.map((reminder) => {
               return (
                 <li key={reminder.id} className="dash-reminder-card">
-                 <ReminderItem reminder={reminder} />
+                  <ReminderItem reminder={reminder} />
                 </li>
               );
             })}
@@ -120,23 +142,33 @@ function DashboardPage() {
       {/* ── Status summary ── */}
       <div className="dash-status-row">
         <div className="dash-status-card">
-          <span className="material-symbols-outlined dash-status-icon">notifications_active</span>
+          <span className="material-symbols-outlined dash-status-icon">
+            notifications_active
+          </span>
           <div>
-            <p className="dash-status-value">{upcoming.filter((r) => daysUntil(r.event_date) <= 7).length}</p>
+            <p className="dash-status-value">
+              {upcoming.filter((r) => daysUntil(r.event_date) <= 7).length}
+            </p>
             <p className="dash-status-label">This week</p>
           </div>
         </div>
         <div className="dash-status-card">
-          <span className="material-symbols-outlined dash-status-icon">event</span>
+          <span className="material-symbols-outlined dash-status-icon">
+            event
+          </span>
           <div>
             <p className="dash-status-value">{upcoming.length}</p>
             <p className="dash-status-label">Next 30 days</p>
           </div>
         </div>
         <div className="dash-status-card">
-          <span className="material-symbols-outlined dash-status-icon">check_circle</span>
+          <span className="material-symbols-outlined dash-status-icon">
+            check_circle
+          </span>
           <div>
-            <p className="dash-status-value">{reminders.filter((r) => r.is_active).length}</p>
+            <p className="dash-status-value">
+              {reminders.filter((r) => r.is_active).length}
+            </p>
             <p className="dash-status-label">Active reminders</p>
           </div>
         </div>

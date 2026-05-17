@@ -1,11 +1,11 @@
-import { NavLink, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { NavLink, useLocation } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const NAV_ITEMS = [
-  { to: '/', icon: 'dashboard', label: 'Dashboard' },
-  { to: '/calendar', icon: 'calendar_month', label: 'Calendar' },
-  { to: '/reminders/new', icon: 'add_circle', label: 'New Event' },
-  { to: '/users', icon: 'person', label: 'Users' },
+  { to: "/", icon: "dashboard", label: "Dashboard" },
+  { to: "/calendar", icon: "calendar_month", label: "Calendar" },
+  { to: "/reminders/new", icon: "add_circle", label: "New Event" },
+  { to: "/users", icon: "person", label: "Users" },
 ];
 
 function AuthenticatedShell({ children }) {
@@ -25,12 +25,14 @@ function AuthenticatedShell({ children }) {
             <NavLink
               key={to}
               to={to}
-              end={to === '/'}
+              end={to === "/"}
               className={({ isActive }) =>
-                `shell-nav-link${isActive ? ' shell-nav-link--active' : ''}`
+                `shell-nav-link${isActive ? " shell-nav-link--active" : ""}`
               }
             >
-              <span className="shell-nav-icon material-symbols-outlined">{icon}</span>
+              <span className="shell-nav-icon material-symbols-outlined">
+                {icon}
+              </span>
               <span>{label}</span>
             </NavLink>
           ))}
@@ -45,12 +47,13 @@ function AuthenticatedShell({ children }) {
         <header className="shell-topbar">
           <div className="shell-topbar-left">
             <h2 className="shell-topbar-title">
-              {NAV_ITEMS.find((item) => item.to === location.pathname)?.label || 'Event Reminder'}
+              {NAV_ITEMS.find((item) => item.to === location.pathname)?.label ||
+                "Event Reminder"}
             </h2>
           </div>
 
           <div className="shell-topbar-right">
-            <span className="shell-user-email">{user?.email || 'User'}</span>
+            <span className="shell-user-email">{user?.email || "User"}</span>
             <button className="shell-logout" type="button" onClick={logout}>
               Logout
             </button>

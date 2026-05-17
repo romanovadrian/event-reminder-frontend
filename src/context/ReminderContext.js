@@ -5,14 +5,14 @@ import {
   useEffect,
   useMemo,
   useReducer,
-} from 'react';
-import { useAuth } from './AuthContext';
+} from "react";
+import { useAuth } from "./AuthContext";
 import {
   createReminder,
   deleteReminder,
   listReminders,
   updateReminder,
-} from '../services/reminderService';
+} from "../services/reminderService";
 
 const ReminderContext = createContext(null);
 
@@ -24,27 +24,27 @@ const initialState = {
 
 function reminderReducer(state, action) {
   switch (action.type) {
-    case 'FETCH_START':
+    case "FETCH_START":
       return { ...state, isLoading: true, error: null };
-    case 'FETCH_SUCCESS':
+    case "FETCH_SUCCESS":
       return { ...state, reminders: action.payload, isLoading: false };
-    case 'FETCH_ERROR':
+    case "FETCH_ERROR":
       return { ...state, isLoading: false, error: action.payload };
-    case 'ADD':
+    case "ADD":
       return { ...state, reminders: [...state.reminders, action.payload] };
-    case 'UPDATE':
+    case "UPDATE":
       return {
         ...state,
         reminders: state.reminders.map((r) =>
-          r.id === action.payload.id ? action.payload : r
+          r.id === action.payload.id ? action.payload : r,
         ),
       };
-    case 'REMOVE':
+    case "REMOVE":
       return {
         ...state,
         reminders: state.reminders.filter((r) => r.id !== action.payload),
       };
-    case 'RESET':
+    case "RESET":
       return initialState;
     default:
       return state;
@@ -57,63 +57,71 @@ export function ReminderProvider({ children }) {
 
   useEffect(() => {
     if (!isAuthenticated || !token) {
-      dispatch({ type: 'RESET' });
+      dispatch({ type: "RESET" });
       return;
     }
 
     let isMounted = true;
 
     async function load() {
-      dispatch({ type: 'FETCH_START' });
+      dispatch({ type: "FETCH_START" });
       try {
         const data = await listReminders(token);
         if (isMounted) {
-          dispatch({ type: 'FETCH_SUCCESS', payload: Array.isArray(data) ? data : [] });
+          dispatch({
+            type: "FETCH_SUCCESS",
+            payload: Array.isArray(data) ? data : [],
+          });
         }
       } catch (err) {
         if (isMounted) {
-          dispatch({ type: 'FETCH_ERROR', payload: err.message });
+          dispatch({ type: "FETCH_ERROR", payload: err.message });
         }
       }
     }
 
     load();
-    return () => { isMounted = false; };
+    return () => {
+      isMounted = false;
+    };
   }, [token, isAuthenticated]);
 
   const addReminder = useCallback(
     async (reminderData) => {
       const created = await createReminder(token, reminderData);
-      dispatch({ type: 'ADD', payload: created });
+      dispatch({ type: "ADD", payload: created });
       return created;
     },
-    [token]
+    [token],
   );
 
   const editReminder = useCallback(
     async (id, reminderData) => {
       const updated = await updateReminder(token, id, reminderData);
-      dispatch({ type: 'UPDATE', payload: updated });
+      dispatch({ type: "UPDATE", payload: updated });
       return updated;
     },
-    [token]
+    [token],
   );
 
   const removeReminder = useCallback(
     async (id) => {
       await deleteReminder(token, id);
-      dispatch({ type: 'REMOVE', payload: id });
+      dispatch({ type: "REMOVE", payload: id });
     },
-    [token]
+    [token],
   );
 
   const refresh = useCallback(async () => {
-    dispatch({ type: 'FETCH_START' });
+    dispatch({ type: "FETCH_START" });
     try {
       const data = await listReminders(token);
-      dispatch({ type: 'FETCH_SUCCESS', payload: Array.isArray(data) ? data : [] });
+      dispatch({
+        type: "FETCH_SUCCESS",
+        payload: Array.isArray(data) ? data : [],
+      });
     } catch (err) {
-      dispatch({ type: 'FETCH_ERROR', payload: err.message });
+      dispatch({ type: "FETCH_ERROR", payload: err.message });
     }
   }, [token]);
 
@@ -125,18 +133,20 @@ export function ReminderProvider({ children }) {
       removeReminder,
       refresh,
     }),
-    [state, addReminder, editReminder, removeReminder, refresh]
+    [state, addReminder, editReminder, removeReminder, refresh],
   );
 
   return (
-    <ReminderContext.Provider value={value}>{children}</ReminderContext.Provider>
+    <ReminderContext.Provider value={value}>
+      {children}
+    </ReminderContext.Provider>
   );
 }
 
 export function useReminders() {
   const ctx = useContext(ReminderContext);
   if (!ctx) {
-    throw new Error('useReminders must be used within a ReminderProvider');
+    throw new Error("useReminders must be used within a ReminderProvider");
   }
   return ctx;
 }

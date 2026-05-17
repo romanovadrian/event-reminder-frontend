@@ -1,4 +1,4 @@
-const REACT_APP_ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT
+const REACT_APP_ENVIRONMENT = process.env.REACT_APP_ENVIRONMENT;
 
 function buildHeaders(token, customHeaders) {
   const headers = {
@@ -14,14 +14,14 @@ function buildHeaders(token, customHeaders) {
 
 async function request(path, options = {}) {
   let url;
-  if (REACT_APP_ENVIRONMENT === 'production') {
+  if (REACT_APP_ENVIRONMENT === "production") {
     url = `/api${path}`;
-    console.log('Using proxy for API requests in production', process.env);
+    console.log("Using proxy for API requests in production", process.env);
   } else {
     url = path;
-    console.log('Using direct API requests in development', process.env);
+    console.log("Using direct API requests in development", process.env);
   }
-  
+
   const response = await fetch(url, options);
 
   if (response.status === 204) {
@@ -30,18 +30,21 @@ async function request(path, options = {}) {
 
   // Signal auth expiry so the app can log the user out
   if (response.status === 401) {
-    window.dispatchEvent(new CustomEvent('auth:expired'));
-    throw new Error('Session expired. Please sign in again.');
+    window.dispatchEvent(new CustomEvent("auth:expired"));
+    throw new Error("Session expired. Please sign in again.");
   }
 
-  const contentType = response.headers.get('content-type') || '';
-  const isJson = contentType.includes('application/json');
+  const contentType = response.headers.get("content-type") || "";
+  const isJson = contentType.includes("application/json");
   const body = isJson ? await response.json() : await response.text();
 
   if (!response.ok) {
-    const message = isJson && body?.detail
-      ? (typeof body.detail === 'string' ? body.detail : JSON.stringify(body.detail))
-      : `${response.status} ${response.statusText}`;
+    const message =
+      isJson && body?.detail
+        ? typeof body.detail === "string"
+          ? body.detail
+          : JSON.stringify(body.detail)
+        : `${response.status} ${response.statusText}`;
     throw new Error(message);
   }
 
@@ -50,16 +53,16 @@ async function request(path, options = {}) {
 
 export async function apiGet(path, token, customHeaders) {
   return request(path, {
-    method: 'GET',
+    method: "GET",
     headers: buildHeaders(token, customHeaders),
   });
 }
 
 export async function apiPost(path, token, body, customHeaders) {
   return request(path, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       ...buildHeaders(token, customHeaders),
     },
     body: JSON.stringify(body),
@@ -69,9 +72,9 @@ export async function apiPost(path, token, body, customHeaders) {
 export async function apiPostForm(path, formValues, customHeaders) {
   const params = new URLSearchParams(formValues);
   return request(path, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      "Content-Type": "application/x-www-form-urlencoded",
       ...(customHeaders || {}),
     },
     body: params.toString(),

@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useReminders } from '../context/ReminderContext';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useReminders } from "../context/ReminderContext";
 
 const EVENT_TYPES = [
-  { value: 'birthday', label: 'Birthday', icon: 'cake' },
-  { value: 'anniversary', label: 'Anniversary', icon: 'favorite' },
-  { value: 'custom', label: 'Custom', icon: 'celebration' },
+  { value: "birthday", label: "Birthday", icon: "cake" },
+  { value: "anniversary", label: "Anniversary", icon: "favorite" },
+  { value: "custom", label: "Custom", icon: "celebration" },
 ];
 
 function ReminderFormPage() {
@@ -15,11 +15,11 @@ function ReminderFormPage() {
   const [error, setError] = useState(null);
   const [touched, setTouched] = useState({});
   const [form, setForm] = useState({
-    title: '',
-    event_type: 'birthday',
-    event_date: '',
+    title: "",
+    event_type: "birthday",
+    event_date: "",
     remind_days_before: 3,
-    notes: '',
+    notes: "",
   });
 
   function handleChange(e) {
@@ -33,9 +33,11 @@ function ReminderFormPage() {
 
   function getFieldError(name) {
     if (!touched[name]) return null;
-    if (name === 'title' && !form.title.trim()) return 'Event name is required.';
-    if (name === 'title' && form.title.trim().length > 160) return 'Max 160 characters.';
-    if (name === 'event_date' && !form.event_date) return 'Date is required.';
+    if (name === "title" && !form.title.trim())
+      return "Event name is required.";
+    if (name === "title" && form.title.trim().length > 160)
+      return "Max 160 characters.";
+    if (name === "event_date" && !form.event_date) return "Date is required.";
     return null;
   }
 
@@ -45,7 +47,7 @@ function ReminderFormPage() {
     setTouched({ title: true, event_date: true });
 
     if (!form.title.trim() || !form.event_date) {
-      setError('Please fill in all required fields.');
+      setError("Please fill in all required fields.");
       return;
     }
 
@@ -58,7 +60,7 @@ function ReminderFormPage() {
         remind_days_before: Number(form.remind_days_before),
         notes: form.notes.trim() || null,
       });
-      navigate('/');
+      navigate("/");
     } catch (err) {
       setError(err.message);
     } finally {
@@ -77,7 +79,9 @@ function ReminderFormPage() {
 
       <form className="reminder-form" onSubmit={handleSubmit}>
         <div className="field-group">
-          <label className="field-label" htmlFor="title">Event name</label>
+          <label className="field-label" htmlFor="title">
+            Event name
+          </label>
           <input
             id="title"
             name="title"
@@ -87,10 +91,10 @@ function ReminderFormPage() {
             value={form.title}
             onChange={handleChange}
             onBlur={handleBlur}
-            aria-invalid={!!getFieldError('title')}
+            aria-invalid={!!getFieldError("title")}
           />
-          {getFieldError('title') && (
-            <span className="field-error">{getFieldError('title')}</span>
+          {getFieldError("title") && (
+            <span className="field-error">{getFieldError("title")}</span>
           )}
         </div>
 
@@ -100,7 +104,7 @@ function ReminderFormPage() {
             {EVENT_TYPES.map(({ value, label, icon }) => (
               <label
                 key={value}
-                className={`reminder-type-chip${form.event_type === value ? ' reminder-type-chip--active' : ''}`}
+                className={`reminder-type-chip${form.event_type === value ? " reminder-type-chip--active" : ""}`}
               >
                 <input
                   type="radio"
@@ -119,7 +123,9 @@ function ReminderFormPage() {
 
         <div className="reminder-form-row">
           <div className="field-group">
-            <label className="field-label" htmlFor="event_date">Date</label>
+            <label className="field-label" htmlFor="event_date">
+              Date
+            </label>
             <input
               id="event_date"
               name="event_date"
@@ -128,15 +134,17 @@ function ReminderFormPage() {
               value={form.event_date}
               onChange={handleChange}
               onBlur={handleBlur}
-              aria-invalid={!!getFieldError('event_date')}
+              aria-invalid={!!getFieldError("event_date")}
             />
-            {getFieldError('event_date') && (
-              <span className="field-error">{getFieldError('event_date')}</span>
+            {getFieldError("event_date") && (
+              <span className="field-error">{getFieldError("event_date")}</span>
             )}
           </div>
 
           <div className="field-group">
-            <label className="field-label" htmlFor="remind_days_before">Remind me</label>
+            <label className="field-label" htmlFor="remind_days_before">
+              Remind me
+            </label>
             <select
               id="remind_days_before"
               name="remind_days_before"
@@ -154,7 +162,9 @@ function ReminderFormPage() {
         </div>
 
         <div className="field-group">
-          <label className="field-label" htmlFor="notes">Notes (optional)</label>
+          <label className="field-label" htmlFor="notes">
+            Notes (optional)
+          </label>
           <textarea
             id="notes"
             name="notes"
@@ -166,15 +176,17 @@ function ReminderFormPage() {
           />
         </div>
 
-        {error && (
-          <div className="status-message status-error">{error}</div>
-        )}
+        {error && <div className="status-message status-error">{error}</div>}
 
         <div className="reminder-form-actions">
           <button type="submit" className="button-block" disabled={submitting}>
-            {submitting ? 'Saving…' : 'Save Reminder'}
+            {submitting ? "Saving…" : "Save Reminder"}
           </button>
-          <button type="button" className="button-secondary" onClick={() => navigate(-1)}>
+          <button
+            type="button"
+            className="button-secondary"
+            onClick={() => navigate(-1)}
+          >
             Cancel
           </button>
         </div>

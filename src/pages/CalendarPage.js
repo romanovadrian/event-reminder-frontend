@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useReminders } from '../context/ReminderContext';
-import { daysUntil, eventTypeIcon } from '../utils/reminderEngine';
-import ReminderItem  from './ReminderItem';
+import { useState } from "react";
+import { useReminders } from "../context/ReminderContext";
+import { daysUntil, eventTypeIcon } from "../utils/reminderEngine";
+import ReminderItem from "./ReminderItem";
 
-const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 function getCalendarDays(year, month) {
   const first = new Date(year, month, 1);
@@ -27,15 +27,19 @@ function CalendarPage() {
   const [month, setMonth] = useState(today.getMonth());
   const todayDate = today.getDate();
   const days = getCalendarDays(year, month);
-  const getMonthLabel = () => new Date(year, month).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  const getMonthLabel = () =>
+    new Date(year, month).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    });
 
   function getRemindersForDay(day) {
-    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    const dateStr = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
     return activeReminders.filter((r) => r.event_date === dateStr);
   }
 
   function getRemindersForMonth() {
-    const monthStr = `${year}-${String(month + 1).padStart(2, '0')}`;
+    const monthStr = `${year}-${String(month + 1).padStart(2, "0")}`;
     return activeReminders.filter((r) => r.event_date.startsWith(monthStr));
   }
 
@@ -48,8 +52,8 @@ function CalendarPage() {
       return prev + 1;
     });
   }
-  
-  function prevMonth() {  
+
+  function prevMonth() {
     setMonth((prev) => {
       if (prev === 0) {
         setYear((y) => y - 1);
@@ -61,11 +65,11 @@ function CalendarPage() {
 
   function Header() {
     return (
-    <div className="cal-header">
-      <button onClick={prevMonth}>Previous</button>
-      <h2 className="cal-month">{getMonthLabel()}</h2>
-      <button onClick={nextMonth}>Next</button>
-    </div>
+      <div className="cal-header">
+        <button onClick={prevMonth}>Previous</button>
+        <h2 className="cal-month">{getMonthLabel()}</h2>
+        <button onClick={nextMonth}>Next</button>
+      </div>
     );
   }
 
@@ -83,7 +87,9 @@ function CalendarPage() {
       <div className="cal">
         <Header />
         <p className="cal-hint">{error}</p>
-        <button className="button-secondary" onClick={refresh}>Retry</button>
+        <button className="button-secondary" onClick={refresh}>
+          Retry
+        </button>
       </div>
     );
   }
@@ -94,18 +100,22 @@ function CalendarPage() {
 
       <div className="cal-grid">
         {DAYS.map((d) => (
-          <div key={d} className="cal-day-label">{d}</div>
+          <div key={d} className="cal-day-label">
+            {d}
+          </div>
         ))}
         {days.map((day, i) => {
           if (day === null) {
-            return <div key={`blank-${i}`} className="cal-cell cal-cell--blank" />;
+            return (
+              <div key={`blank-${i}`} className="cal-cell cal-cell--blank" />
+            );
           }
           const reminders = getRemindersForDay(day);
           const isToday = day === todayDate;
           return (
             <div
               key={day}
-              className={`cal-cell${isToday ? ' cal-cell--today' : ''}${reminders.length ? ' cal-cell--has-event' : ''}`}
+              className={`cal-cell${isToday ? " cal-cell--today" : ""}${reminders.length ? " cal-cell--has-event" : ""}`}
             >
               <span className="cal-cell-num">{day}</span>
               {reminders.map((r) => (

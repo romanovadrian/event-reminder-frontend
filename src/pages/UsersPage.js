@@ -1,4 +1,4 @@
-import { useUsers } from '../context/UserContext';
+import { useUsers } from "../context/UserContext";
 
 function UsersPage() {
   const { users, isLoading, error } = useUsers();
@@ -16,22 +16,28 @@ function UsersPage() {
 
       {isLoading ? (
         <div className="users-empty">
-          <span className="material-symbols-outlined users-empty-icon">hourglass_top</span>
+          <span className="material-symbols-outlined users-empty-icon">
+            hourglass_top
+          </span>
           <p className="users-empty-title">Loading users…</p>
         </div>
       ) : error ? (
         <div className="users-empty">
-          <span className="material-symbols-outlined users-empty-icon">error_outline</span>
+          <span className="material-symbols-outlined users-empty-icon">
+            error_outline
+          </span>
           <p className="users-empty-title">Could not load users</p>
           <p className="users-empty-copy">{error}</p>
         </div>
       ) : users.length === 0 ? (
         <div className="users-empty">
-          <span className="material-symbols-outlined users-empty-icon">group</span>
+          <span className="material-symbols-outlined users-empty-icon">
+            group
+          </span>
           <p className="users-empty-title">No users yet</p>
           <p className="users-empty-copy">
-            Users you create or invite will appear here. Connect them to reminders so the right
-            people get notified at the right time.
+            Users you create or invite will appear here. Connect them to
+            reminders so the right people get notified at the right time.
           </p>
         </div>
       ) : (
@@ -42,7 +48,9 @@ function UsersPage() {
                 <span className="material-symbols-outlined">person</span>
               </div>
               <div className="users-card-body">
-                <h3 className="users-card-name">{user.full_name || user.email}</h3>
+                <h3 className="users-card-name">
+                  {user.full_name || user.email}
+                </h3>
                 <p className="users-card-email">{user.email}</p>
               </div>
             </li>
