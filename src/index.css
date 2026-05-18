@@ -623,6 +623,10 @@ select[aria-invalid="true"] {
   border-bottom: 1px solid var(--outline);
 }
 
+.shell-topbar-left {
+  min-width: 0;
+}
+
 .shell-topbar-title {
   font-size: 1.1rem;
   font-weight: 700;
@@ -634,9 +638,16 @@ select[aria-invalid="true"] {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .shell-user-email {
+  display: block;
+  max-width: min(45vw, 280px);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 0.82rem;
   color: var(--text-muted);
   font-weight: 500;
@@ -714,6 +725,10 @@ select[aria-invalid="true"] {
 
   .shell-topbar {
     padding: 14px 18px;
+  }
+
+  .shell-user-email {
+    max-width: 42vw;
   }
 
   .shell-content {
